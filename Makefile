@@ -13,7 +13,9 @@ render-talk:
 	git push origin main
 
 render-site:
-	quarto render 
+	-rm docs/index.html
+	cd site && quarto render index.qmd
+
 pdf:
 	-mkdir docs/pdfs
 	decktape reveal docs/talk/NiPreps.html docs/pdfs/$(VERSION).pdf
