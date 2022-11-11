@@ -1,7 +1,7 @@
 VERSION = "NiPreps_BRAIN_Nov2022"
 
 
-all: render pdf
+all: render-talk render-site render-pdf
 
 render-talk:
 	-rm -rf docs/talk/*
@@ -15,8 +15,10 @@ render-talk:
 render-site:
 	-rm docs/index.html
 	cd site && quarto render index.qmd
+	git commit -a -m"updating changed files"
+	git push origin main
 
-pdf:
+render-pdf:
 	-mkdir docs/pdfs
 	decktape reveal docs/talk/NiPreps.html docs/pdfs/$(VERSION).pdf
 	git add docs/pdfs/$(VERSION).pdf
