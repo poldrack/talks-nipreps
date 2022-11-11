@@ -4,6 +4,7 @@ VERSION = "NiPreps_BRAIN_Nov2022"
 all: render pdf
 
 render:
+	-rm -rf docs/talk/*
 	quarto render NiPreps.qmd
 	# fix quarto bug
 	cat docs/talk/index.html| sed 's-LICENSE-talk/NiPreps-' > docs/talk/index.html
