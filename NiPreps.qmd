@@ -7,6 +7,7 @@ title-slide-attributes:
     data-background-opacity: "0.5"
 format:
   revealjs: 
+    footer: "http://www.russpoldrack.org/talks-nipreps/"
     slide-number: true
     chalkboard: 
       buttons: false
@@ -14,7 +15,6 @@ format:
     theme: [default, rp-theme.scss]
     height: 1080
     width: 1920
-
 ---
 
 ## The standard design (anti-)pattern for fMRI preprocessing
