@@ -1,5 +1,8 @@
 VERSION = "NiPreps_BRAIN_Nov2022"
 
+
+all: render pdf
+
 render:
 	quarto render NiPreps.qmd
 	git commit -a -m"updating changed files"
