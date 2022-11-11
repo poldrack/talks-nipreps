@@ -7,7 +7,8 @@ render:
 	-rm -rf docs/talk/*
 	quarto render NiPreps.qmd
 	# fix quarto bug
-	cat docs/talk/index.html| sed 's-LICENSE-talk/NiPreps-' > docs/talk/index.html
+	# need to use sed inline mode
+	sed -i.bak 's-LICENSE-talk/NiPreps-' docs/talk/index.html > docs/talk/index.html
 	git commit -a -m"updating changed files"
 	git push origin main
 
