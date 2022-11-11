@@ -1,0 +1,296 @@
+---
+title: "The NiPreps ecosystem for reproducible neuroimaging" 
+author: Russ Poldrack
+institute: Stanford University
+title-slide-attributes:
+    data-background-image: ./images/stanford_background.jpg
+    data-background-opacity: "0.5"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    theme: [default, rp-theme.scss]
+    height: 1080
+    width: 1920
+
+---
+
+## The standard design (anti-)pattern for fMRI preprocessing
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Pick a single software package
+    - Usually based on considerations other than performance
+
+:::
+![](images/fsl.jpg){.absolute top=100 left=1100}
+![](images/afni.jpeg){.absolute top=350 left=1200}
+![](images/spm.jpg){.absolute top=700 left=1000}
+
+::::
+
+
+## The standard design (anti-)pattern for fMRI preprocessing
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Pick a software package
+    - Usually based on considerations other than performance
+- String together the tools from that package into a script to run the preprocessing workflow
+
+:::
+::: {.column width="50%"}
+
+![](images/script_andys_brain_blog.jpg){fig-alt="from https://andysbrainbook.readthedocs.io/en/latest/fMRI_Short_Course/fMRI_06_Scripting.html."}
+
+:::
+::::
+
+
+## The standard design (anti-)pattern for fMRI preprocessing
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Pick a software package
+    - Usually based on considerations other than performance
+- String together the tools from that package into a script to run the preprocessing workflow
+    - Generallly written by a student or postdoc with little software engineering experience
+- Hope it keeps working over time...
+- Trust that it does the right thing...
+:::
+::: {.column width="50%"}
+
+![](images/script_andys_brain_blog.jpg){fig-alt="from https://andysbrainbook.readthedocs.io/en/latest/fMRI_Short_Course/fMRI_06_Scripting.html."}
+
+:::
+::::
+
+
+## Towards a new design pattern for fMRI preprocessing: fMRIPrep
+
+:::: {.columns}
+::: {.column width="33%"}
+- **A robust workflow for preprocessing fMRI data**
+  - Tested on a large number of fMRI datasets from OpenNeuro
+  - Adapts to each dataset to process it in the best way possible
+  - Provides a common interface to a variety of tools
+  - Provide visualization to help identify problems
+:::
+
+::: {.column width="67%"}
+!
+![](images/fmriprep.jpg)
+:::
+::: {.absolute top=95% left=150}
+Esteban et al., 2019, *Nature Methods*
+:::
+::::
+
+## fMRIPrep usage
+:::: {.columns}
+::: {.column width="33%"}
+- Usage tracked using an opt-out telemetry system
+  - Allows quick identification of bugs and usage patterns
+:::
+
+::: {.column width="67%"}
+![](images/fmriprep_runs.jpg)
+:::
+::::
+
+## NiPreps: An ecosystem of Neuroimaging Preprocessing Tools
+
+![](images/nipreps.jpg){.absolute top=75 left=150}
+
+
+## The NiPreps community
+
+:::: {.columns}
+
+::: {.column width="33%"}
+![](images/poldracklab.jpg)
+<div class=centered >Poldracklab (Stanford)</div>
+
+<div class=centered >Esteban Lab (CHUV Lausanne)</div>
+:::
+
+::: {.column width="33%"}
+![](images/tedlab.png){.centered}
+
+<div class=centered >Satterthwaite Lab (Penn)</div>
+
+<div class=centered >Milham Lab (Child Mind Inst)</div>
+:::
+
+::: {.column width="33%"}
+![](images/rokemlab.jpg)
+<div class=centered >Rokem Lab (UW)</div>
+:::
+
+::::
+
+
+## Nipreps principles
+- **Openness and community engagement**
+    - All work done in the open
+    - Community-driven decision making
+
+
+## Nipreps principles
+- **Openness and community engagement**
+    - All work done in the open
+    - Community-driven decision making
+- **Reproducibility and transparency**
+    - Containerized applications following the BIDS-Apps specification
+    - Detailed visual reporting
+    - Citation boilerplate to ensure standards-compliant reporting
+
+
+## Nipreps principles
+- **Openness and community engagement**
+    - All work done in the open
+    - Community-driven decision making
+- **Reproducibility and transparency**
+    - Containerized applications following the BIDS-Apps specification
+    - Detailed visual reporting
+    - Citation boilerplate to ensure standards-compliant reporting
+- **Generality, consistency, and robustness**
+    - Fully based on the BIDS and BIDS-Derivatives standards
+    - Tested using continuous integration
+
+
+## Nipreps principles
+- **Openness and community engagement**
+    - All work done in the open
+    - Community-driven decision making
+- **Reproducibility and transparency**
+    - Containerized applications following the BIDS-Apps specification
+    - Detailed visual reporting
+    - Citation boilerplate to ensure standards-compliant reporting
+- **Generality, consistency, and robustness**
+    - Fully based on the BIDS and BIDS-Derivatives standards
+    - Tested using continuous integration
+- **Modularity and longevity potential**
+    - Reusable middleware components
+
+
+## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+
+- **Aim 1: Solidify and extend NiPreps infrastructure and middleware**
+    - TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases
+    - SDCflows: Integrating susceptibility distortion correction
+    - NiTransforms: Integrating spatial transforms
+
+
+## Middleware: TemplateFlow
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Templates and atlases are commonly used in neuroimaging research
+- There is significant lack of clarity in the use of these templates
+    - There are numerous versions of the widely used “MNI template”
+- Templateflow provides programmatic access to a database of templates and mappings between them
+
+- Python API clience:
+
+![](images/templateflow_cli.jpg)
+:::
+::: {.absolute top=95% left=150}
+Esteban et al., 2022, *Nature Methods*
+:::
+
+::: {.column width="50%"}
+![](images/templateflow_fig-templates.png)
+:::
+::::
+
+
+## Middleware: SDCFlows
+
+
+## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+
+- **Aim 2: Expand the portfolio of end-user NiPreps**
+    - ASLPrep
+    - dMRIPrep
+    - PETPrep
+    - NiBabies
+    - NiRodents
+
+
+## Workflows: ASLPrep (cerebral blood flow quantification)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- **A robust workflow for preprocessing arterial spin labeling (ASL) data**
+  - Including cerebral blood flow (CBF) quantification
+  - Provides quality evaluation for CBF maps
+  - Provides CBF quantification at the regional level using atlases
+:::
+::: {.column width="50%"}
+![](images/aslprep.png){.absolute height=90%}
+:::
+::: {.absolute top=95% left=150}
+Adepimbe et al., 2022, *Nature Methods*
+:::
+::::
+
+
+## Workflows: dMRIPrep (diffusion MRI)
+
+
+## Workflows: PETPrep (positron emission tomography)
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- **A NiPreps workflow for PET preprocessing**
+  - Successfully merged petsurfer into nipype (1.8.0)
+  - Incorporated nipype implementation of a robust head motion correction workflow (petprep_hmc)
+  - Developing a BIDS-Derivatives standard for PET derivatives
+:::
+
+::: {.column width="60%"}
+![](images/petprep_outputs.png)
+:::
+::: {.absolute top=95% left=150}
+Martin Norgaard, *in prep*
+:::
+
+::::
+
+## Workflows: NiBabies (infant human MRI)
+
+
+## Workflows: NiRodents (rodent MRI)
+
+
+## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+
+- **Aim 3: Consolidate the NiPreps community**
+    - Project monitoring infrastructure: MIGAS
+    - Evaluation of cross-workflow reproducibility
+    - Hackathons and documentation
+
+
+## Project monitoring: MIGAS
+
+
+## Reproducibility: Cross-workflow evaluation
+
+
+## Hackathons and documentation
+
+
+## Thank you!
+
