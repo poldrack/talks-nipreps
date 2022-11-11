@@ -3,7 +3,9 @@ VERSION = "NiPreps_BRAIN_Nov2022"
 
 all: render pdf
 
+# ensure that talk folder is added
 render:
+	-git add docs/talk/*
 	quarto render NiPreps.qmd
 	git commit -a -m"updating changed files"
 	git push origin main
