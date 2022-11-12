@@ -269,6 +269,18 @@ Ciric et al., 2022, *Nature Methods*
 ## Middleware: SDCFlows
 
 
+## Infrastructure: Architectural redesign
+
+- Problem: fMRIPrep's "one size fits all" design has limitations for emerging use cases
+    - Archiving preprocessing results requires balancing storage costs against possible use cases.
+    - Including alternative algorithms requires custom code to integrate.
+
+- Solution: Accept pre-computed derivatives and defer computationally cheap operations
+    - Multiple template registrations can be archived, analysts may resample BOLD series on demand.
+    - Deep learning segmentations and masks can be accepted, skipping fMRIPrep defaults.
+
+- This approach is implemented in SDCFlows and is being generalized to other components.
+
 ## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
 <div style="font-size: 1.2em">
 
