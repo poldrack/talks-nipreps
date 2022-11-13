@@ -130,7 +130,7 @@
     "href": "NiPreps.html#workflows-nibabies-infant-human-mri",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Workflows: NiBabies (infant human MRI)",
-    "text": "Workflows: NiBabies (infant human MRI)"
+    "text": "Workflows: NiBabies (infant human MRI)\n\n\n\nCollaboraration with Damien Fair & HBCD team\nNew developments\n\nSupport for pre-computed derivatives (mask, segmentations).\nImproved robustness and validity of CIFTI-2 outputs.\n\nUpcoming developments\n\nMorphometric outputs (cortical thickness, curvature)\nImprovements to susceptibility distortion correction versatility\nT2 assisted surface generation\n\n\n\nimage here\n\n\n\nMathias Goncalves, in prep"
   },
   {
     "objectID": "NiPreps.html#workflows-nirodents-rodent-mri",
@@ -151,14 +151,14 @@
     "href": "NiPreps.html#project-monitoring-migas",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Project monitoring: MIGAS",
-    "text": "Project monitoring: MIGAS\n\n\n\n\nAn open-source, customizable telemetry solution\nAllows collecting usage information, errors, and status throughout a process’s lifetime\nEasy to deploy with various cloud providers (Heroku / GCP / AWS)\nAvailable as a Python package: https://pypi.org/project/migas/"
+    "text": "Project monitoring: MIGAS\n\n\n\n\nAn open-source, customizable telemetry solution\nAllows collecting usage information, errors, and status throughout a process’s lifetime\nEasy to deploy with various cloud providers (Heroku / GCP / AWS)\nAvailable as a Python package: https://pypi.org/project/migas/\n\n\n\n\n\nMathias Goncalves, in prep"
   },
   {
     "objectID": "NiPreps.html#reproducibility-cross-workflow-evaluation",
     "href": "NiPreps.html#reproducibility-cross-workflow-evaluation",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Reproducibility: Cross-workflow evaluation",
-    "text": "Reproducibility: Cross-workflow evaluation"
+    "text": "Reproducibility: Cross-workflow evaluation\n\n\n\nCMI team developed a CPAC implementation of fMRIPrep\n\nAble to achieve high levels of reproducibility in connectivity metrics between harmonized workflows\nHelped identify causes of divergence, such as use of different versions of MNI template\n\n\n\n\n\n\n\nLi et al., under review"
   },
   {
     "objectID": "NiPreps.html#hackathons-and-documentation",

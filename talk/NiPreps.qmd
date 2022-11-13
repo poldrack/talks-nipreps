@@ -97,7 +97,7 @@ format:
 !
 ![](images/fmriprep.jpg)
 :::
-::: {.absolute top=95% left=150}
+::: {.absolute top=95% left=50}
 Esteban et al., 2019, *Nature Methods*
 :::
 ::::
@@ -256,7 +256,7 @@ Esteban Lab (CHUV Lausanne)
 
 ![](images/templateflow_cli.jpg)
 :::
-::: {.absolute top=95% left=150}
+::: {.absolute top=95% left=50}
 Ciric et al., 2022, *Nature Methods*
 :::
 
@@ -293,7 +293,7 @@ Ciric et al., 2022, *Nature Methods*
 ::: {.column width="50%"}
 ![](images/aslprep.png){.absolute height=90%}
 :::
-::: {.absolute top=95% left=150}
+::: {.absolute top=95% left=50}
 Adepimbe et al., 2022, *Nature Methods*
 :::
 ::::
@@ -316,7 +316,7 @@ Adepimbe et al., 2022, *Nature Methods*
 ::: {.column width="60%"}
 ![](images/petprep_outputs.png)
 :::
-::: {.absolute top=95% left=150}
+::: {.absolute top=95% left=50}
 Martin Norgaard, *in prep*
 :::
 
@@ -324,7 +324,26 @@ Martin Norgaard, *in prep*
 
 ## Workflows: NiBabies (infant human MRI)
 
+:::: {.columns}
 
+::: {.column width="40%"}
+
+- Collaboraration with Damien Fair & HBCD team
+- **New developments**
+  - Support for pre-computed derivatives (mask, segmentations).
+  - Improved robustness and validity of CIFTI-2 outputs.
+- **Upcoming developments**
+  - Morphometric outputs (cortical thickness, curvature)
+  - Improvements to susceptibility distortion correction versatility
+  - T2 assisted surface generation
+:::
+::: {.column width="60%"}
+image here
+:::
+::::
+::: {.absolute top=95% left=50}
+Mathias Goncalves, *in prep*
+:::
 ## Workflows: NiRodents (rodent MRI)
 
 
@@ -349,9 +368,26 @@ Martin Norgaard, *in prep*
 </div>
 :::
 ::::
+::: {.absolute top=95% left=50}
+Mathias Goncalves, *in prep*
+:::
 
 ## Reproducibility: Cross-workflow evaluation
+:::: {.columns}
 
+::: {.column width="30%"}
+- CMI team developed a CPAC implementation of fMRIPrep
+  - Able to achieve high levels of reproducibility in connectivity metrics between harmonized workflows
+  - Helped identify causes of divergence, such as use of different versions of MNI template
+
+:::
+::: {.column width="70%"}
+![](images/li_figure1.jpg)
+:::
+::::
+::: {.absolute top=95% left=50}
+Li et al., *under review*
+:::
 
 ## Hackathons and documentation
 
