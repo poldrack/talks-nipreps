@@ -386,14 +386,16 @@ Mathias Goncalves, *in prep*
 :::
 ::::
 ::: {.absolute top=95% left=50}
-Li et al., *under review*
+Xinhui Li et al., *under review*
 :::
 
 ## Hackathons and documentation
 
+<div style="font-size: 1.2em">
+- Held a hackathon/documentation sprint in Glasgow following OHBM 2022
+- Will participate in Brainhack Global 2022
+- Planning to hold a hackathon/documentation sprint in Montreal in association with OHBM 2023
 --- 
-
-
 <div style='position=absolute;top:90%;width:100%;text-align:center;font-size:100px;'>
 Thank you!
 </div>

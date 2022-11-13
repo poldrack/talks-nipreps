@@ -158,13 +158,13 @@
     "href": "NiPreps.html#reproducibility-cross-workflow-evaluation",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Reproducibility: Cross-workflow evaluation",
-    "text": "Reproducibility: Cross-workflow evaluation\n\n\n\nCMI team developed a CPAC implementation of fMRIPrep\n\nAble to achieve high levels of reproducibility in connectivity metrics between harmonized workflows\nHelped identify causes of divergence, such as use of different versions of MNI template\n\n\n\n\n\n\n\nLi et al., under review"
+    "text": "Reproducibility: Cross-workflow evaluation\n\n\n\nCMI team developed a CPAC implementation of fMRIPrep\n\nAble to achieve high levels of reproducibility in connectivity metrics between harmonized workflows\nHelped identify causes of divergence, such as use of different versions of MNI template\n\n\n\n\n\n\n\nXinhui Li et al., under review"
   },
   {
     "objectID": "NiPreps.html#hackathons-and-documentation",
     "href": "NiPreps.html#hackathons-and-documentation",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Hackathons and documentation",
-    "text": "Hackathons and documentation"
+    "text": "Hackathons and documentation\n\n\nHeld a hackathon/documentation sprint in Glasgow following OHBM 2022\nWill participate in Brainhack Global 2022\nPlanning to hold a hackathon/documentation sprint in Montreal in association with OHBM 2023"
   }
 ]
