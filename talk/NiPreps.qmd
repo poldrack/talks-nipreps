@@ -7,7 +7,7 @@ title-slide-attributes:
     data-background-opacity: "0.5"
 format:
   revealjs: 
-    footer: "http://www.russpoldrack.org/talks-nipreps/"
+    footer: "https://poldrack.github.io/talks-nipreps/"
     slide-number: true
     chalkboard: 
       buttons: false
@@ -22,9 +22,11 @@ format:
 :::: {.columns}
 
 ::: {.column width="50%"}
+<div style="font-size: 1.2em">
 
 - Pick a single software package
     - Usually based on considerations other than performance
+</div>
 
 :::
 ![](images/fsl.jpg){.absolute top=100 left=1100}
@@ -39,11 +41,12 @@ format:
 :::: {.columns}
 
 ::: {.column width="50%"}
+<div style="font-size: 1.2em">
 
-- Pick a software package
+- Pick a single software package
     - Usually based on considerations other than performance
 - String together the tools from that package into a script to run the preprocessing workflow
-
+</div>
 :::
 ::: {.column width="50%"}
 
@@ -58,13 +61,16 @@ format:
 :::: {.columns}
 
 ::: {.column width="50%"}
+<div style="font-size: 1.2em">
 
-- Pick a software package
+- Pick a single software package
     - Usually based on considerations other than performance
 - String together the tools from that package into a script to run the preprocessing workflow
     - Generallly written by a student or postdoc with little software engineering experience
 - Hope it keeps working over time...
 - Trust that it does the right thing...
+</div>
+
 :::
 ::: {.column width="50%"}
 
@@ -77,15 +83,17 @@ format:
 ## Towards a new design pattern for fMRI preprocessing: fMRIPrep
 
 :::: {.columns}
-::: {.column width="33%"}
+::: {.column width="40%"}
+<div style="font-size: 1.1em">
 - **A robust workflow for preprocessing fMRI data**
   - Tested on a large number of fMRI datasets from OpenNeuro
   - Adapts to each dataset to process it in the best way possible
   - Provides a common interface to a variety of tools
   - Provide visualization to help identify problems
+</div>
 :::
 
-::: {.column width="67%"}
+::: {.column width="60%"}
 !
 ![](images/fmriprep.jpg)
 :::
@@ -96,12 +104,14 @@ Esteban et al., 2019, *Nature Methods*
 
 ## fMRIPrep usage
 :::: {.columns}
-::: {.column width="33%"}
+::: {.column width="50%"}
+<div style="font-size: 1.2em">
 - Usage tracked using an opt-out telemetry system
   - Allows quick identification of bugs and usage patterns
+</div>
 :::
 
-::: {.column width="67%"}
+::: {.column width="50%"}
 ![](images/fmriprep_runs.jpg)
 :::
 ::::
@@ -116,10 +126,15 @@ Esteban et al., 2019, *Nature Methods*
 :::: {.columns}
 
 ::: {.column width="33%"}
-![](images/poldracklab.jpg)
-<div class=centered >Poldracklab (Stanford)</div>
+<div class=centered >
+![](images/poldracklab.jpg){height=350}
 
-<div class=centered >Esteban Lab (CHUV Lausanne)</div>
+Poldracklab (Stanford)
+
+![](https://wp.unil.ch/connectomics/files/2020/10/OscarEsteban.jpg){height=300}
+
+Esteban Lab (CHUV Lausanne)
+</div>
 :::
 
 ::: {.column width="33%"}
@@ -139,12 +154,26 @@ Esteban et al., 2019, *Nature Methods*
 
 
 ## Nipreps principles
+<div style="font-size: 1.2em">
+:::: {.columns}
+::: {.column width="50%"}
 - **Openness and community engagement**
     - All work done in the open
     - Community-driven decision making
 
+:::
+
+::: {.column width="50%"}
+:::
+::::
+</div>
 
 ## Nipreps principles
+<div style="font-size: 1.2em">
+:::: {.columns}
+
+::: {.column width="50%"}
+
 - **Openness and community engagement**
     - All work done in the open
     - Community-driven decision making
@@ -152,9 +181,18 @@ Esteban et al., 2019, *Nature Methods*
     - Containerized applications following the BIDS-Apps specification
     - Detailed visual reporting
     - Citation boilerplate to ensure standards-compliant reporting
-
+:::
+::: {.column width="50%"}
+:::
+::::
+</div>
 
 ## Nipreps principles
+<div style="font-size: 1.2em">
+:::: {.columns}
+
+::: {.column width="50%"}
+
 - **Openness and community engagement**
     - All work done in the open
     - Community-driven decision making
@@ -162,12 +200,21 @@ Esteban et al., 2019, *Nature Methods*
     - Containerized applications following the BIDS-Apps specification
     - Detailed visual reporting
     - Citation boilerplate to ensure standards-compliant reporting
+:::
+::: {.column width="50%"}
 - **Generality, consistency, and robustness**
     - Fully based on the BIDS and BIDS-Derivatives standards
     - Tested using continuous integration
-
+:::
+::::
+</div>
 
 ## Nipreps principles
+<div style="font-size: 1.2em">
+:::: {.columns}
+
+::: {.column width="50%"}
+
 - **Openness and community engagement**
     - All work done in the open
     - Community-driven decision making
@@ -175,19 +222,24 @@ Esteban et al., 2019, *Nature Methods*
     - Containerized applications following the BIDS-Apps specification
     - Detailed visual reporting
     - Citation boilerplate to ensure standards-compliant reporting
+:::
+::: {.column width="50%"}
 - **Generality, consistency, and robustness**
     - Fully based on the BIDS and BIDS-Derivatives standards
     - Tested using continuous integration
 - **Modularity and longevity potential**
     - Reusable middleware components
-
+:::
+::::
+</div>
 
 ## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
-
+<div style="font-size: 1.2em">
 - **Aim 1: Solidify and extend NiPreps infrastructure and middleware**
     - TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases
     - SDCflows: Integrating susceptibility distortion correction
-    - NiTransforms: Integrating spatial transforms
+    - <span style="color: gray;">NiTransforms: Integrating spatial transforms</span>
+</div>
 
 
 ## Middleware: TemplateFlow
@@ -200,12 +252,12 @@ Esteban et al., 2019, *Nature Methods*
     - There are numerous versions of the widely used “MNI template”
 - Templateflow provides programmatic access to a database of templates and mappings between them
 
-- Python API clience:
+- Python API client:
 
 ![](images/templateflow_cli.jpg)
 :::
 ::: {.absolute top=95% left=150}
-Esteban et al., 2022, *Nature Methods*
+Ciric et al., 2022, *Nature Methods*
 :::
 
 ::: {.column width="50%"}
@@ -218,6 +270,7 @@ Esteban et al., 2022, *Nature Methods*
 
 
 ## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+<div style="font-size: 1.2em">
 
 - **Aim 2: Expand the portfolio of end-user NiPreps**
     - ASLPrep
@@ -225,7 +278,7 @@ Esteban et al., 2022, *Nature Methods*
     - PETPrep
     - NiBabies
     - NiRodents
-
+</div>
 
 ## Workflows: ASLPrep (cerebral blood flow quantification)
 
@@ -276,21 +329,35 @@ Martin Norgaard, *in prep*
 
 
 ## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+<div style="font-size: 1.2em">
 
 - **Aim 3: Consolidate the NiPreps community**
     - Project monitoring infrastructure: MIGAS
     - Evaluation of cross-workflow reproducibility
     - Hackathons and documentation
-
+</div>
 
 ## Project monitoring: MIGAS
+:::: {.columns}
 
+::: {.column width="70%"}
+<div class=larger>
+- An open-source, customizable telemetry solution
+- Allows collecting usage information, errors, and status  throughout a process’s lifetime
+- Easy to deploy with various cloud providers (Heroku / GCP / AWS)
+- Available as a Python package: https://pypi.org/project/migas/
+</div>
+:::
+::::
 
 ## Reproducibility: Cross-workflow evaluation
 
 
 ## Hackathons and documentation
 
+--- 
 
-## Thank you!
 
+<div style='position=absolute;top:90%;width:100%;text-align:center;font-size:100px;'>
+Thank you!
+</div>
