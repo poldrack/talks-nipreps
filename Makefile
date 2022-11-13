@@ -15,8 +15,10 @@ render-talk:
 
 render-site:
 	-rm docs/index.html
+	git commit -a -m"updating site files"
 	cd site && quarto render index.qmd
-	git commit -a -m"updating changed files"
+	git add docs/*
+	git commit -m"updating changed files"
 	git push origin main
 
 render-pdf:
