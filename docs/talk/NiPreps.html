@@ -344,12 +344,14 @@ Russ Poldrack
 <h2>The standard design (anti-)pattern for fMRI preprocessing</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div style="font-size: 1.2em">
 <ul>
 <li>Pick a single software package
 <ul>
 <li>Usually based on considerations other than performance</li>
 </ul></li>
 </ul>
+</div>
 </div><p><img data-src="images/fsl.jpg" class="absolute" style="top: 100px; left: 1100px; "> <img data-src="images/afni.jpeg" class="absolute" style="top: 350px; left: 1200px; "> <img data-src="images/spm.jpg" class="absolute" style="top: 700px; left: 1000px; "></p>
 </div>
 </section>
@@ -357,13 +359,15 @@ Russ Poldrack
 <h2>The standard design (anti-)pattern for fMRI preprocessing</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div style="font-size: 1.2em">
 <ul>
-<li>Pick a software package
+<li>Pick a single software package
 <ul>
 <li>Usually based on considerations other than performance</li>
 </ul></li>
 <li>String together the tools from that package into a script to run the preprocessing workflow</li>
 </ul>
+</div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/script_andys_brain_blog.jpg" alt="from https://andysbrainbook.readthedocs.io/en/latest/fMRI_Short_Course/fMRI_06_Scripting.html."></p>
 </div>
@@ -373,8 +377,9 @@ Russ Poldrack
 <h2>The standard design (anti-)pattern for fMRI preprocessing</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div style="font-size: 1.2em">
 <ul>
-<li>Pick a software package
+<li>Pick a single software package
 <ul>
 <li>Usually based on considerations other than performance</li>
 </ul></li>
@@ -385,6 +390,7 @@ Russ Poldrack
 <li>Hope it keeps working over time…</li>
 <li>Trust that it does the right thing…</li>
 </ul>
+</div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/script_andys_brain_blog.jpg" alt="from https://andysbrainbook.readthedocs.io/en/latest/fMRI_Short_Course/fMRI_06_Scripting.html."></p>
 </div>
@@ -393,7 +399,8 @@ Russ Poldrack
 <section id="towards-a-new-design-pattern-for-fmri-preprocessing-fmriprep" class="slide level2">
 <h2>Towards a new design pattern for fMRI preprocessing: fMRIPrep</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:40%;">
+<div style="font-size: 1.1em">
 <ul>
 <li><strong>A robust workflow for preprocessing fMRI data</strong>
 <ul>
@@ -403,7 +410,8 @@ Russ Poldrack
 <li>Provide visualization to help identify problems</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:67%;">
+</div>
+</div><div class="column" style="width:60%;">
 <p>! <img data-src="images/fmriprep.jpg"></p>
 </div><div class="absolute" style="top: 95%; left: 150px; ">
 <p>Esteban et al., 2019, <em>Nature Methods</em></p>
@@ -413,14 +421,16 @@ Russ Poldrack
 <section id="fmriprep-usage" class="slide level2">
 <h2>fMRIPrep usage</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:50%;">
+<div style="font-size: 1.2em">
 <ul>
 <li>Usage tracked using an opt-out telemetry system
 <ul>
 <li>Allows quick identification of bugs and usage patterns</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:67%;">
+</div>
+</div><div class="column" style="width:50%;">
 <p><img data-src="images/fmriprep_runs.jpg"></p>
 </div>
 </div>
@@ -433,12 +443,11 @@ Russ Poldrack
 <h2>The NiPreps community</h2>
 <div class="columns">
 <div class="column" style="width:33%;">
-<img data-src="images/poldracklab.jpg">
 <div class="centered">
-Poldracklab (Stanford)
-</div>
-<div class="centered">
-Esteban Lab (CHUV Lausanne)
+<p><img data-src="images/poldracklab.jpg" height="350"></p>
+<p>Poldracklab (Stanford)</p>
+<p><img data-src="https://wp.unil.ch/connectomics/files/2020/10/OscarEsteban.jpg" height="300"></p>
+<p>Esteban Lab (CHUV Lausanne)</p>
 </div>
 </div><div class="column" style="width:33%;">
 <p><img data-src="images/tedlab.png" class="centered"></p>
@@ -458,6 +467,9 @@ Rokem Lab (UW)
 </section>
 <section id="nipreps-principles" class="slide level2">
 <h2>Nipreps principles</h2>
+<div style="font-size: 1.2em">
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><strong>Openness and community engagement</strong>
 <ul>
@@ -465,9 +477,17 @@ Rokem Lab (UW)
 <li>Community-driven decision making</li>
 </ul></li>
 </ul>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+</div>
 </section>
 <section id="nipreps-principles-1" class="slide level2">
 <h2>Nipreps principles</h2>
+<div style="font-size: 1.2em">
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><strong>Openness and community engagement</strong>
 <ul>
@@ -481,9 +501,17 @@ Rokem Lab (UW)
 <li>Citation boilerplate to ensure standards-compliant reporting</li>
 </ul></li>
 </ul>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+</div>
 </section>
 <section id="nipreps-principles-2" class="slide level2">
 <h2>Nipreps principles</h2>
+<div style="font-size: 1.2em">
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><strong>Openness and community engagement</strong>
 <ul>
@@ -496,15 +524,24 @@ Rokem Lab (UW)
 <li>Detailed visual reporting</li>
 <li>Citation boilerplate to ensure standards-compliant reporting</li>
 </ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
 <li><strong>Generality, consistency, and robustness</strong>
 <ul>
 <li>Fully based on the BIDS and BIDS-Derivatives standards</li>
 <li>Tested using continuous integration</li>
 </ul></li>
 </ul>
+</div>
+</div>
+</div>
 </section>
 <section id="nipreps-principles-3" class="slide level2">
 <h2>Nipreps principles</h2>
+<div style="font-size: 1.2em">
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><strong>Openness and community engagement</strong>
 <ul>
@@ -517,6 +554,9 @@ Rokem Lab (UW)
 <li>Detailed visual reporting</li>
 <li>Citation boilerplate to ensure standards-compliant reporting</li>
 </ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
 <li><strong>Generality, consistency, and robustness</strong>
 <ul>
 <li>Fully based on the BIDS and BIDS-Derivatives standards</li>
@@ -527,17 +567,22 @@ Rokem Lab (UW)
 <li>Reusable middleware components</li>
 </ul></li>
 </ul>
+</div>
+</div>
+</div>
 </section>
 <section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species" class="slide level2">
 <h2>RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
+<div style="font-size: 1.2em">
 <ul>
 <li><strong>Aim 1: Solidify and extend NiPreps infrastructure and middleware</strong>
 <ul>
 <li>TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases</li>
 <li>SDCflows: Integrating susceptibility distortion correction</li>
-<li>NiTransforms: Integrating spatial transforms</li>
+<li><span style="color: gray;">NiTransforms: Integrating spatial transforms</span></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="middleware-templateflow" class="slide level2">
 <h2>Middleware: TemplateFlow</h2>
@@ -550,11 +595,11 @@ Rokem Lab (UW)
 <li>There are numerous versions of the widely used “MNI template”</li>
 </ul></li>
 <li><p>Templateflow provides programmatic access to a database of templates and mappings between them</p></li>
-<li><p>Python API clience:</p></li>
+<li><p>Python API client:</p></li>
 </ul>
 <p><img data-src="images/templateflow_cli.jpg"></p>
 </div><div class="absolute" style="top: 95%; left: 150px; ">
-<p>Esteban et al., 2022, <em>Nature Methods</em></p>
+<p>Ciric et al., 2022, <em>Nature Methods</em></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/templateflow_fig-templates.png"></p>
 </div>
@@ -565,6 +610,7 @@ Rokem Lab (UW)
 </section>
 <section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-1" class="slide level2">
 <h2>RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
+<div style="font-size: 1.2em">
 <ul>
 <li><strong>Aim 2: Expand the portfolio of end-user NiPreps</strong>
 <ul>
@@ -575,6 +621,7 @@ Rokem Lab (UW)
 <li>NiRodents</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="workflows-aslprep-cerebral-blood-flow-quantification" class="slide level2">
 <h2>Workflows: ASLPrep (cerebral blood flow quantification)</h2>
@@ -625,6 +672,7 @@ Rokem Lab (UW)
 </section>
 <section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-2" class="slide level2">
 <h2>RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
+<div style="font-size: 1.2em">
 <ul>
 <li><strong>Aim 3: Consolidate the NiPreps community</strong>
 <ul>
@@ -633,9 +681,22 @@ Rokem Lab (UW)
 <li>Hackathons and documentation</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="project-monitoring-migas" class="slide level2">
 <h2>Project monitoring: MIGAS</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="larger">
+<ul>
+<li>An open-source, customizable telemetry solution</li>
+<li>Allows collecting usage information, errors, and status throughout a process’s lifetime</li>
+<li>Easy to deploy with various cloud providers (Heroku / GCP / AWS)</li>
+<li>Available as a Python package: https://pypi.org/project/migas/</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="reproducibility-cross-workflow-evaluation" class="slide level2">
 <h2>Reproducibility: Cross-workflow evaluation</h2>
@@ -643,11 +704,14 @@ Rokem Lab (UW)
 <section id="hackathons-and-documentation" class="slide level2">
 <h2>Hackathons and documentation</h2>
 </section>
-<section id="thank-you" class="slide level2">
-<h2>Thank you!</h2>
+<section class="slide level2">
+
+<div style="position=absolute;top:90%;width:100%;text-align:center;font-size:100px;">
+<p>Thank you!</p>
+</div>
 
 <div class="footer footer-default">
-<p>http://www.russpoldrack.org/talks-nipreps/</p>
+<p>https://poldrack.github.io/talks-nipreps/</p>
 </div>
 </section>
     </div>
