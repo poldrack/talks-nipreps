@@ -95,7 +95,14 @@
     "href": "talk.html#middleware-sdcflows",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Middleware: SDCFlows",
-    "text": "Middleware: SDCFlows"
+    "text": "Middleware: SDCFlows\n\nSusceptibility distortion correction is a significant source of analytical flexibility\n\nMultiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed \\(B_0\\) maps)\nMultiple correction implementations with different data structures\n\nComparability among methods is poor, with little insight into sources of variation\nSDCFlows\n\nDefines an intermediate representation of a field inhomogeneity map\nWraps or implements methods for estimating this map from different sequences\nProvides a single method for applying estimated maps to EPI sequences\n\nSDCFlows is used in fMRIPrep and dMRIPrep, with plans to make a standalone tool for custom processing or easier interoperation with other pipelines"
+  },
+  {
+    "objectID": "talk.html#infrastructure-architectural-redesign",
+    "href": "talk.html#infrastructure-architectural-redesign",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Infrastructure: Architectural redesign",
+    "text": "Infrastructure: Architectural redesign\n\n\nProblem: fMRIPrep’s “one size fits all” design has limitations for emerging use cases\n\nArchiving preprocessing results requires balancing storage costs against possible use cases.\nIncluding alternative algorithms requires custom code to integrate.\n\nSolution: Accept pre-computed derivatives and defer computationally cheap operations\n\nMultiple template registrations can be archived, analysts may resample BOLD series to different spaces on demand.\nDeep learning segmentations and masks can be accepted, skipping fMRIPrep defaults.\n\nThis approach is implemented in SDCFlows and is being generalized to other components."
   },
   {
     "objectID": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-1",

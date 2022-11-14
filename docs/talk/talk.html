@@ -607,6 +607,39 @@ Rokem Lab (UW)
 </section>
 <section id="middleware-sdcflows" class="slide level2">
 <h2>Middleware: SDCFlows</h2>
+<ul>
+<li><p>Susceptibility distortion correction is a significant source of analytical flexibility</p>
+<ul>
+<li>Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed <span class="math inline">\(B_0\)</span> maps)</li>
+<li>Multiple correction implementations with different data structures</li>
+</ul></li>
+<li><p>Comparability among methods is poor, with little insight into sources of variation</p></li>
+<li><p>SDCFlows</p>
+<ul>
+<li>Defines an intermediate representation of a field inhomogeneity map</li>
+<li>Wraps or implements methods for estimating this map from different sequences</li>
+<li>Provides a single method for applying estimated maps to EPI sequences</li>
+</ul></li>
+<li><p>SDCFlows is used in fMRIPrep and dMRIPrep, with plans to make a standalone tool for custom processing or easier interoperation with other pipelines</p></li>
+</ul>
+</section>
+<section id="infrastructure-architectural-redesign" class="slide level2">
+<h2>Infrastructure: Architectural redesign</h2>
+<div style="font-size: 1.2em">
+<ul>
+<li>Problem: fMRIPrep’s “one size fits all” design has limitations for emerging use cases
+<ul>
+<li>Archiving preprocessing results requires balancing storage costs against possible use cases.</li>
+<li>Including alternative algorithms requires custom code to integrate.</li>
+</ul></li>
+<li>Solution: Accept pre-computed derivatives and defer computationally cheap operations
+<ul>
+<li>Multiple template registrations can be archived, analysts may resample BOLD series to different spaces on demand.</li>
+<li>Deep learning segmentations and masks can be accepted, skipping fMRIPrep defaults.</li>
+</ul></li>
+<li>This approach is implemented in SDCFlows and is being generalized to other components.</li>
+</ul>
+</div>
 </section>
 <section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-1" class="slide level2">
 <h2>RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
