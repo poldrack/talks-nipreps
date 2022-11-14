@@ -18,19 +18,24 @@ from github import Github
 import pandas as pd
 import requests
 from git import Repo
+import os
 
 with open('.token') as f:
     token = f.read().strip()
 
+# get info about present repo
+repo_obj = Repo('.')
+repo_name = repo.remotes.origin.url.split(':')[1].split('.')[0]
+
+## use github api to find releases
 # Github username
 username = "poldrack"
 # pygithub object
-g = Github(token)
+g = Github(os.path.join(repo_obj.working_dir, '.token'))
+
 # get that user by username
 user = g.get_user(username)
 
-repo_obj = Repo('.')
-repo_name = repo.remotes.origin.url.split(':')[1].split('.')[0]
 
 repo_info = g.get_repo(repo_name)
 releases = list(repo_info.get_releases())
