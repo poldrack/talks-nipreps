@@ -1,4 +1,5 @@
-VERSION = "NiPreps_BRAIN_Nov2022"
+# This tag should match the release tag in Github
+TAG = "NiPreps_BRAINInformatics_11_17_2022"
 
 
 all: render-talk render-site render-pdf
@@ -25,8 +26,8 @@ render-site:
 
 render-pdf:
 	-mkdir docs/pdfs
-	decktape reveal docs/talk/talk.html docs/pdfs/$(VERSION).pdf
-	git add docs/pdfs/$(VERSION).pdf
+	decktape reveal docs/talk/talk.html docs/pdfs/$(TAG).pdf
+	git add docs/pdfs/$(TAG).pdf
 	git commit -m"adding pdf [skip ci]"
 	git push origin main
 

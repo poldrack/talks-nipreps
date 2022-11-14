@@ -25,7 +25,7 @@
     "href": "talk.html#towards-a-new-design-pattern-for-fmri-preprocessing-fmriprep",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Towards a new design pattern for fMRI preprocessing: fMRIPrep",
-    "text": "Towards a new design pattern for fMRI preprocessing: fMRIPrep\n\n\n\n\nA robust workflow for preprocessing fMRI data\n\nTested on a large number of fMRI datasets from OpenNeuro\nAdapts to each dataset to process it in the best way possible\nProvides a common interface to a variety of tools\nProvide visualization to help identify problems\n\n\n\n\n! \n\nEsteban et al., 2019, Nature Methods"
+    "text": "Towards a new design pattern for fMRI preprocessing: fMRIPrep\n\n\n\n\nA robust workflow for preprocessing fMRI data\n\nTested on a large number of fMRI datasets from OpenNeuro\nBIDS allows fMRIPrep to adapt to each dataset and process it in the best way possible\nBIDS-Derivatives allows fMRIPrep to remain “analysis-agnostic” (works as a common interface for downstream analyses)\nProvides powerful visualizations (“individual reports”):\n\nto help identify problems (QC of methods)\nallowing glass-box access to training researchers (“knowledge scaffold”)\n\n\n\n\n\n! \n\nEsteban et al., 2019, Nature Methods"
   },
   {
     "objectID": "talk.html#fmriprep-usage",
@@ -42,32 +42,60 @@
     "text": "NiPreps: An ecosystem of Neuroimaging Preprocessing Tools"
   },
   {
-    "objectID": "talk.html#the-nipreps-community",
-    "href": "talk.html#the-nipreps-community",
+    "objectID": "talk.html#nurturing-a-new-community",
+    "href": "talk.html#nurturing-a-new-community",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
-    "section": "The NiPreps community",
-    "text": "The NiPreps community\n\n\n\n\nPoldracklab (Stanford)\n \nEsteban Lab (CHUV Lausanne)\n\n\n\n\nSatterthwaite Lab (Penn)\n\n\nMilham Lab (Child Mind Inst)\n\n\n\n\nRokem Lab (UW)"
+    "section": "Nurturing a new community",
+    "text": "Nurturing a new community"
   },
   {
     "objectID": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species",
     "href": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
-    "section": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species",
-    "text": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species\n\n\nAim 1: Solidify and extend NiPreps infrastructure and middleware\n\nTemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases\nSDCflows: Integrating susceptibility distortion correction\nNiTransforms: Integrating spatial transforms"
+    "section": "RF1MH121867: NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species",
+    "text": "RF1MH121867: NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species\n… the overarching objective of this project is to develop NiPreps, a software framework to perform standardized preprocessing of diverse neuroimaging data.\n\nAim 1: solidify the foundations of the NiPreps integration.\nAim 2: enable integrative analysis approaches of heterogeneous data.\nAim 3: accelerate the dissemination of NiPreps to the neuroscience community through hackathons and “docusprints”."
   },
   {
-    "objectID": "talk.html#middleware-templateflow",
-    "href": "talk.html#middleware-templateflow",
+    "objectID": "talk.html#rf1mh121867-sites",
+    "href": "talk.html#rf1mh121867-sites",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
-    "section": "Middleware: TemplateFlow",
-    "text": "Middleware: TemplateFlow\n\n\n\nTemplates and atlases are commonly used in neuroimaging research\nThere is significant lack of clarity in the use of these templates\n\nThere are numerous versions of the widely used “MNI template”\n\nTemplateflow provides programmatic access to a database of templates and mappings between them\nPython API client:\n\n\n\nCiric et al., 2022, Nature Methods"
+    "section": "RF1MH121867: Sites",
+    "text": "RF1MH121867: Sites\n\n\n\n\nPoldracklab (Stanford)\n \nEsteban Lab (CHUV Lausanne)\n\n\n\n\nSatterthwaite Lab (Penn)\n\n\nMilham Lab (Child Mind Inst)\n\n\n\n\nRokem Lab (UW)"
   },
   {
-    "objectID": "talk.html#middleware-sdcflows-sdc-susceptibility-distortion-correction",
-    "href": "talk.html#middleware-sdcflows-sdc-susceptibility-distortion-correction",
+    "objectID": "talk.html#aim-1-solidify-the-foundations-of-the-nipreps-integration.",
+    "href": "talk.html#aim-1-solidify-the-foundations-of-the-nipreps-integration.",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
-    "section": "Middleware: SDCFlows (SDC = susceptibility distortion correction)",
-    "text": "Middleware: SDCFlows (SDC = susceptibility distortion correction)\n\nWhat? Wraps or implements methods for estimating field maps in various scenarios:\n\ncovering (i) so-called TOPUP, (ii) phase-difference fieldmaps and their variants, (iii) fMRIPrep’s “fieldmapless”; but\nit does not cover point-spread-function approaches (extremely marginal).\n\nHow?\n\nDefines a shared representation model (B-Spline) for the field map (comparability ↑↑, methodological variability ↓↓)\nTechnical perk: “decouples” estimation and application steps (modularity ↑↑, methodological variability ↑).\n\nWhy?\n\nA single tool can be applied to correct for distortion, no matter how it was estimated (method comparability ↑↑)\nThe model coefficients can easily be moved with head motion (e.g., dynamic fieldmap)\nThe model coefficients can easily be integrated in spatial transformation chains (one-shot interpolation)\nThe model coefficients can easily be integrated within other software (e.g., eddymotion)\n\n\n\n\n\n\n\n\nSDC is a significant source of analytical flexibility in functional and diffusion MRI processing\n\n\n- Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof\n- Multiple correction implementations with different data structures"
+    "section": "Aim 1: Solidify the foundations of the NiPreps integration.",
+    "text": "Aim 1: Solidify the foundations of the NiPreps integration.\nIn addition to maintenance across the board and infrastructure (e.g., website), this aim focuses in four specific elements:\n\nTemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases\nSDCflows: Integrating susceptibility distortion correction (SDC)\nModularization, and generalization of the Visual Reports System (NiReports)\nIntegrating preclinical imaging into NiPreps (NiRodents)\nSpatial transforms integration (NiTransforms)"
+  },
+  {
+    "objectID": "talk.html#templateflow",
+    "href": "talk.html#templateflow",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "TemplateFlow",
+    "text": "TemplateFlow\n\n\n\nTemplates and atlases are commonly used in neuroimaging research\nThere is significant lack of clarity in the use of these templates\n\nThere are numerous versions of the widely used “MNI template”\n\nTemplateflow provides programmatic access to a database of templates and mappings between them\nPython API client:\n\n\n\nCiric et al., 2022, Nature Methods"
+  },
+  {
+    "objectID": "talk.html#sdcflows",
+    "href": "talk.html#sdcflows",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "SDCFlows",
+    "text": "SDCFlows\n\nWhat? Wraps or implements methods for estimating field maps in various scenarios:\n\ncovering (i) so-called TOPUP, (ii) phase-difference fieldmaps and their variants, (iii) fMRIPrep’s “fieldmapless”; but\nit does not cover point-spread-function approaches (extremely marginal).\n\nHow?\n\nDefines a shared representation model (B-Spline) for the field map (comparability ↑↑, methodological variability ↓↓)\nTechnical perk: “decouples” estimation and application steps (modularity ↑↑, methodological variability ↑).\n\nWhy?\n\nA single tool can be applied to correct for distortion, no matter how it was estimated (method comparability ↑↑)\nThe model coefficients can easily be moved with head motion (e.g., dynamic fieldmap)\nThe model coefficients can easily be integrated in spatial transformation chains (one-shot interpolation)\nThe model coefficients can easily be integrated within other software (e.g., eddymotion)\n\n\n\n\n\n\n\n\nSDC is a significant source of analytical flexibility in functional and diffusion MRI processing\n\n\n- Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof\n- Multiple correction implementations with different data structures"
+  },
+  {
+    "objectID": "talk.html#nirodents",
+    "href": "talk.html#nirodents",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "NiRodents",
+    "text": "NiRodents\n\nMRIQC adapted for rodent imaging saw a first release in April 2022\nfMRIPrep-rodents is currently integrating SDCFlows, which requires some adaptations (e.g., FSL topup likes images of within the range of 1-2 mm isotropic resolution)\nNiRodents has stimulated several improvements of the reporting system (see next)\nNiRodents has stimulated the inclusion (and revision of existing) rodent templates in TemplateFlow"
+  },
+  {
+    "objectID": "talk.html#nireports-and-nitransforms-status-report",
+    "href": "talk.html#nireports-and-nitransforms-status-report",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "NiReports and NiTransforms (status report)",
+    "text": "NiReports and NiTransforms (status report)\n\nNiReports: provides standard mechanisms to build “reportlets” and full reports.\n\nA repository has been initiated\nCode already exists, but it is scattered across tools (e.g., MRIQC, fMRIPrep)\nIn the OHBM Hackathon, work initiated for moving MRIQC visual components into it (fMRIPrep will follow).\n\nNiTransforms:\n\nThe component is in a stable status\nThe component is key to achieving a redesign of fMRIPrep (described next)"
   },
   {
     "objectID": "talk.html#infrastructure-architectural-redesign",

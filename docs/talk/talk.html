@@ -405,9 +405,13 @@ Russ Poldrack
 <li><strong>A robust workflow for preprocessing fMRI data</strong>
 <ul>
 <li>Tested on a large number of fMRI datasets from OpenNeuro</li>
-<li>Adapts to each dataset to process it in the best way possible</li>
-<li>Provides a common interface to a variety of tools</li>
-<li>Provide visualization to help identify problems</li>
+<li>BIDS allows fMRIPrep to adapt to each dataset and process it in the best way possible</li>
+<li>BIDS-Derivatives allows fMRIPrep to remain “analysis-agnostic” (works as a common interface for downstream analyses)</li>
+<li>Provides powerful visualizations (“individual reports”):
+<ul>
+<li>to help identify problems (QC of methods)</li>
+<li>allowing glass-box access to training researchers (“knowledge scaffold”)</li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -452,8 +456,25 @@ Russ Poldrack
 <h2>NiPreps: An ecosystem of Neuroimaging Preprocessing Tools</h2>
 <p><img data-src="https://www.nipreps.org/assets/nipreps-chart.png" class="absolute" style="top: 75px; left: 150px; "></p>
 </section>
-<section id="the-nipreps-community" class="slide level2">
-<h2>The NiPreps community</h2>
+<section id="nurturing-a-new-community" class="slide level2">
+<h2>Nurturing a new community</h2>
+
+<img data-src="images/nipreps-community.png" class="r-stretch"></section>
+
+
+
+
+<section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species" class="slide level2">
+<h2>RF1MH121867: NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
+<p><em>… the overarching <strong>objective of this project is to develop NiPreps</strong>, a software framework to perform standardized preprocessing of diverse neuroimaging data.</em></p>
+<ul>
+<li>Aim 1: solidify the foundations of the NiPreps integration.</li>
+<li>Aim 2: enable integrative analysis approaches of heterogeneous data.</li>
+<li>Aim 3: accelerate the dissemination of NiPreps to the neuroscience community through hackathons and “docusprints”.</li>
+</ul>
+</section>
+<section id="rf1mh121867-sites" class="slide level2">
+<h2>RF1MH121867: Sites</h2>
 <div class="columns">
 <div class="column" style="width:33%;">
 <div class="centered">
@@ -478,25 +499,19 @@ Rokem Lab (UW)
 </div>
 </div>
 </section>
-
-
-
-
-<section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species" class="slide level2">
-<h2>RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
-<div style="font-size: 1.2em">
-<ul>
-<li><strong>Aim 1: Solidify and extend NiPreps infrastructure and middleware</strong>
+<section id="aim-1-solidify-the-foundations-of-the-nipreps-integration." class="slide level2">
+<h2>Aim 1: Solidify the foundations of the NiPreps integration.</h2>
+<p>In addition to maintenance across the board and infrastructure (e.g., website), this aim focuses in four specific elements:</p>
 <ul>
 <li>TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases</li>
-<li>SDCflows: Integrating susceptibility distortion correction</li>
-<li><span style="color: gray;">NiTransforms: Integrating spatial transforms</span></li>
-</ul></li>
+<li>SDCflows: Integrating susceptibility distortion correction (SDC)</li>
+<li>Modularization, and generalization of the Visual Reports System (NiReports)</li>
+<li>Integrating preclinical imaging into NiPreps (NiRodents)</li>
+<li>Spatial transforms integration (NiTransforms)</li>
 </ul>
-</div>
 </section>
-<section id="middleware-templateflow" class="slide level2">
-<h2>Middleware: TemplateFlow</h2>
+<section id="templateflow" class="slide level2">
+<h2>TemplateFlow</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -516,8 +531,8 @@ Rokem Lab (UW)
 </div>
 </div>
 </section>
-<section id="middleware-sdcflows-sdc-susceptibility-distortion-correction" class="slide level2">
-<h2>Middleware: SDCFlows (SDC = susceptibility distortion correction)</h2>
+<section id="sdcflows" class="slide level2">
+<h2>SDCFlows</h2>
 <ul>
 <li><strong>What?</strong> Wraps or implements methods for <strong>estimating</strong> field maps in various scenarios:
 <ul>
@@ -551,6 +566,31 @@ Rokem Lab (UW)
 </div>
 </div>
 </div>
+</section>
+<section id="nirodents" class="slide level2">
+<h2>NiRodents</h2>
+<ul>
+<li>MRIQC adapted for rodent imaging saw a first release in April 2022</li>
+<li>fMRIPrep-rodents is currently integrating SDCFlows, which requires some adaptations (e.g., FSL <code>topup</code> likes images of within the range of 1-2 mm isotropic resolution)</li>
+<li>NiRodents has stimulated several improvements of the reporting system (see next)</li>
+<li>NiRodents has stimulated the inclusion (and revision of existing) rodent templates in TemplateFlow</li>
+</ul>
+</section>
+<section id="nireports-and-nitransforms-status-report" class="slide level2">
+<h2>NiReports and NiTransforms (status report)</h2>
+<ul>
+<li>NiReports: provides standard mechanisms to build “reportlets” and full reports.
+<ul>
+<li>A repository has been initiated</li>
+<li>Code already exists, but it is scattered across tools (e.g., MRIQC, fMRIPrep)</li>
+<li>In the OHBM Hackathon, work initiated for moving MRIQC visual components into it (fMRIPrep will follow).</li>
+</ul></li>
+<li>NiTransforms:
+<ul>
+<li>The component is in a stable status</li>
+<li>The component is key to achieving a redesign of fMRIPrep (described next)</li>
+</ul></li>
+</ul>
 </section>
 <section id="infrastructure-architectural-redesign" class="slide level2">
 <h2>Infrastructure: Architectural redesign</h2>
