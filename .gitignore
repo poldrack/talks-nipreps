@@ -1,5 +1,5 @@
 .Rhistory
 .DS_Store
 .quarto
-contrib
+source/*
 *.pptx
