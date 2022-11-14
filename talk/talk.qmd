@@ -87,9 +87,11 @@ format:
 <div style="font-size: 1.1em">
 - **A robust workflow for preprocessing fMRI data**
   - Tested on a large number of fMRI datasets from OpenNeuro
-  - Adapts to each dataset to process it in the best way possible
-  - Provides a common interface to a variety of tools
-  - Provide visualization to help identify problems
+  - BIDS allows fMRIPrep to adapt to each dataset and process it in the best way possible
+  - BIDS-Derivatives allows fMRIPrep to remain "analysis-agnostic" (works as a common interface for downstream analyses)
+  - Provides powerful visualizations ("individual reports"):
+      - to help identify problems (QC of methods)
+      - allowing glass-box access to training researchers ("knowledge scaffold")
 </div>
 :::
 
@@ -126,36 +128,6 @@ We are developing an open-source alternative called "migas", to replace Sentry
 
 
 ## The NiPreps community
-
-:::: {.columns}
-
-::: {.column width="33%"}
-<div class=centered >
-![](images/poldracklab.jpg){height=350}
-
-Poldracklab (Stanford)
-
-![](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg){height=300}
-![](https://www.axonlab.org/images/teampic/provins.jpg){height=300}
-
-Esteban Lab (CHUV Lausanne)
-</div>
-:::
-
-::: {.column width="33%"}
-![](images/tedlab.png){.centered}
-
-<div class=centered >Satterthwaite Lab (Penn)</div>
-
-<div class=centered >Milham Lab (Child Mind Inst)</div>
-:::
-
-::: {.column width="33%"}
-![](images/rokemlab.jpg)
-<div class=centered >Rokem Lab (UW)</div>
-:::
-
-::::
 
 
 ## Nipreps principles
@@ -237,6 +209,38 @@ Esteban Lab (CHUV Lausanne)
 :::
 ::::
 </div>
+
+## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+
+:::: {.columns}
+
+::: {.column width="33%"}
+<div class=centered >
+![](images/poldracklab.jpg){height=350}
+
+Poldracklab (Stanford)
+
+![](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg){height=300}
+![](https://www.axonlab.org/images/teampic/provins.jpg){height=300}
+
+Esteban Lab (CHUV Lausanne)
+</div>
+:::
+
+::: {.column width="33%"}
+![](images/tedlab.png){.centered}
+
+<div class=centered >Satterthwaite Lab (Penn)</div>
+
+<div class=centered >Milham Lab (Child Mind Inst)</div>
+:::
+
+::: {.column width="33%"}
+![](images/rokemlab.jpg)
+<div class=centered >Rokem Lab (UW)</div>
+:::
+
+::::
 
 ## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
 <div style="font-size: 1.2em">
