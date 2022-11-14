@@ -266,20 +266,27 @@ Ciric et al., 2022, *Nature Methods*
 ::::
 
 
-## Middleware: SDCFlows
+## Middleware: SDCFlows (SDC = susceptibility distortion correction)
 
-- Susceptibility distortion correction is a significant source of analytical flexibility
-    - Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps)
+- **What?** Wraps or implements methods for **estimating** field maps in various scenarios:
+    - covering (i) so-called *TOPUP*, (ii) phase-difference fieldmaps and their variants, (iii) *fMRIPrep*'s "fieldmapless"; but
+    - it does not cover point-spread-function approaches (extremely marginal).
+
+- **How?**
+    - Defines a shared representation model (B-Spline) for the field map (comparability ↑↑, methodological variability ↓↓)
+    - Technical perk: "decouples" estimation and application steps (modularity ↑↑, methodological variability ↑).
+
+- **Why?**
+    - A single tool can be applied to correct for distortion, no matter how it was estimated (method comparability ↑↑)
+    - The model coefficients can easily be moved with head motion (e.g., dynamic fieldmap)
+    - The model coefficients can easily be integrated in spatial transformation chains (one-shot interpolation)
+    - The model coefficients can easily be integrated within other software (e.g., eddymotion)
+
+:::{.callout-note}
+## SDC is a significant source of analytical flexibility in functional and diffusion MRI processing
+    - Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof
     - Multiple correction implementations with different data structures
-- Comparability among methods is poor, with little insight into sources of variation
-
-- SDCFlows
-    - Defines an intermediate representation of a field inhomogeneity map
-    - Wraps or implements methods for estimating this map from different sequences
-    - Provides a single method for applying estimated maps to EPI sequences
-
-- SDCFlows is used in fMRIPrep and dMRIPrep, with plans to make a standalone tool
-  for custom processing or easier interoperation with other pipelines
+:::
 
 
 ## Infrastructure: Architectural redesign
