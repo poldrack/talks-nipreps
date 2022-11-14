@@ -7,4 +7,37 @@
 
 ### Archived versions
 
-[November 2022: BRAIN Initiative Informatics Meeting](pdfs/NiPreps_BRAIN_Nov2022.pdf)
+```{python}
+
+#| echo: false
+#| output: asis
+
+# this uses the GitHub API to find a all releases for this repo
+
+from github import Github
+import pandas as pd
+import requests
+from git import Repo
+
+with open('.token') as f:
+    token = f.read().strip()
+
+# Github username
+username = "poldrack"
+# pygithub object
+g = Github(token)
+# get that user by username
+user = g.get_user(username)
+
+repo_obj = Repo('.')
+repo_name = repo.remotes.origin.url.split(':')[1].split('.')[0]
+
+repo_info = g.get_repo(repo_name)
+releases = list(repo_info.get_releases())
+
+for release in releases:
+    release_date = release.published_at.strftime('%D')
+    print(f'{release_date} - [{release.title}]({release.html_url})')
+
+```
+
