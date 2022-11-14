@@ -1,4 +1,5 @@
 .Rhistory
+.token
 .DS_Store
 .quarto
 source/*
