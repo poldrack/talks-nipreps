@@ -4,12 +4,13 @@ project:
 
 website:
   title: "NiPreps talks"
+  navbar:
+    left:
+      - href: https://github.com/poldrack/talks-nipreps
+        text: Github page
 
 format:
   html:
     theme: flatly
     css: styles.css
-    toc: true
-
-
 
