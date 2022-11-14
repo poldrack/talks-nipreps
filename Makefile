@@ -9,6 +9,7 @@ render-talk:
 	# fix quarto bug
 	# need to use sed inline mode
 	-git add docs/talk/images/*
+	-git add talk/images/*
 	sed -i.bak 's-LICENSE-NiPreps-' docs/talk/index.html
 	git commit -a -m"updating changed files"
 	git push origin main
