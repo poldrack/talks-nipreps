@@ -434,10 +434,23 @@ Russ Poldrack
 <p><img data-src="images/fmriprep_runs.jpg"></p>
 </div>
 </div>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>We are developing an open-source alternative called “migas”, to replace Sentry</p>
+</div>
+</div>
+</div>
 </section>
 <section id="nipreps-an-ecosystem-of-neuroimaging-preprocessing-tools" class="slide level2">
 <h2>NiPreps: An ecosystem of Neuroimaging Preprocessing Tools</h2>
-<p><img data-src="images/nipreps.jpg" class="absolute" style="top: 75px; left: 150px; "></p>
+<p><img data-src="https://www.nipreps.org/assets/nipreps-chart.png" class="absolute" style="top: 75px; left: 150px; "></p>
 </section>
 <section id="the-nipreps-community" class="slide level2">
 <h2>The NiPreps community</h2>
@@ -446,7 +459,7 @@ Russ Poldrack
 <div class="centered">
 <p><img data-src="images/poldracklab.jpg" height="350"></p>
 <p>Poldracklab (Stanford)</p>
-<p><img data-src="https://wp.unil.ch/connectomics/files/2020/10/OscarEsteban.jpg" height="300"></p>
+<p><img data-src="https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg" height="300"> <img data-src="https://www.axonlab.org/images/teampic/provins.jpg" height="300"></p>
 <p>Esteban Lab (CHUV Lausanne)</p>
 </div>
 </div><div class="column" style="width:33%;">
@@ -465,112 +478,10 @@ Rokem Lab (UW)
 </div>
 </div>
 </section>
-<section id="nipreps-principles" class="slide level2">
-<h2>Nipreps principles</h2>
-<div style="font-size: 1.2em">
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><strong>Openness and community engagement</strong>
-<ul>
-<li>All work done in the open</li>
-<li>Community-driven decision making</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
 
-</div>
-</div>
-</div>
-</section>
-<section id="nipreps-principles-1" class="slide level2">
-<h2>Nipreps principles</h2>
-<div style="font-size: 1.2em">
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><strong>Openness and community engagement</strong>
-<ul>
-<li>All work done in the open</li>
-<li>Community-driven decision making</li>
-</ul></li>
-<li><strong>Reproducibility and transparency</strong>
-<ul>
-<li>Containerized applications following the BIDS-Apps specification</li>
-<li>Detailed visual reporting</li>
-<li>Citation boilerplate to ensure standards-compliant reporting</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
 
-</div>
-</div>
-</div>
-</section>
-<section id="nipreps-principles-2" class="slide level2">
-<h2>Nipreps principles</h2>
-<div style="font-size: 1.2em">
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><strong>Openness and community engagement</strong>
-<ul>
-<li>All work done in the open</li>
-<li>Community-driven decision making</li>
-</ul></li>
-<li><strong>Reproducibility and transparency</strong>
-<ul>
-<li>Containerized applications following the BIDS-Apps specification</li>
-<li>Detailed visual reporting</li>
-<li>Citation boilerplate to ensure standards-compliant reporting</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><strong>Generality, consistency, and robustness</strong>
-<ul>
-<li>Fully based on the BIDS and BIDS-Derivatives standards</li>
-<li>Tested using continuous integration</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="nipreps-principles-3" class="slide level2">
-<h2>Nipreps principles</h2>
-<div style="font-size: 1.2em">
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><strong>Openness and community engagement</strong>
-<ul>
-<li>All work done in the open</li>
-<li>Community-driven decision making</li>
-</ul></li>
-<li><strong>Reproducibility and transparency</strong>
-<ul>
-<li>Containerized applications following the BIDS-Apps specification</li>
-<li>Detailed visual reporting</li>
-<li>Citation boilerplate to ensure standards-compliant reporting</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><strong>Generality, consistency, and robustness</strong>
-<ul>
-<li>Fully based on the BIDS and BIDS-Derivatives standards</li>
-<li>Tested using continuous integration</li>
-</ul></li>
-<li><strong>Modularity and longevity potential</strong>
-<ul>
-<li>Reusable middleware components</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+
+
 <section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species" class="slide level2">
 <h2>RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
 <div style="font-size: 1.2em">
@@ -605,23 +516,41 @@ Rokem Lab (UW)
 </div>
 </div>
 </section>
-<section id="middleware-sdcflows" class="slide level2">
-<h2>Middleware: SDCFlows</h2>
+<section id="middleware-sdcflows-sdc-susceptibility-distortion-correction" class="slide level2">
+<h2>Middleware: SDCFlows (SDC = susceptibility distortion correction)</h2>
 <ul>
-<li><p>Susceptibility distortion correction is a significant source of analytical flexibility</p>
+<li><strong>What?</strong> Wraps or implements methods for <strong>estimating</strong> field maps in various scenarios:
 <ul>
-<li>Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed <span class="math inline">\(B_0\)</span> maps)</li>
-<li>Multiple correction implementations with different data structures</li>
+<li>covering (i) so-called <em>TOPUP</em>, (ii) phase-difference fieldmaps and their variants, (iii) <em>fMRIPrep</em>’s “fieldmapless”; but</li>
+<li>it does not cover point-spread-function approaches (extremely marginal).</li>
 </ul></li>
-<li><p>Comparability among methods is poor, with little insight into sources of variation</p></li>
-<li><p>SDCFlows</p>
+<li><strong>How?</strong>
 <ul>
-<li>Defines an intermediate representation of a field inhomogeneity map</li>
-<li>Wraps or implements methods for estimating this map from different sequences</li>
-<li>Provides a single method for applying estimated maps to EPI sequences</li>
+<li>Defines a shared representation model (B-Spline) for the field map (comparability ↑↑, methodological variability ↓↓)</li>
+<li>Technical perk: “decouples” estimation and application steps (modularity ↑↑, methodological variability ↑).</li>
 </ul></li>
-<li><p>SDCFlows is used in fMRIPrep and dMRIPrep, with plans to make a standalone tool for custom processing or easier interoperation with other pipelines</p></li>
+<li><strong>Why?</strong>
+<ul>
+<li>A single tool can be applied to correct for distortion, no matter how it was estimated (method comparability ↑↑)</li>
+<li>The model coefficients can easily be moved with head motion (e.g., dynamic fieldmap)</li>
+<li>The model coefficients can easily be integrated in spatial transformation chains (one-shot interpolation)</li>
+<li>The model coefficients can easily be integrated within other software (e.g., eddymotion)</li>
+</ul></li>
 </ul>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>SDC is a significant source of analytical flexibility in functional and diffusion MRI processing</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>- Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof
+- Multiple correction implementations with different data structures</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="infrastructure-architectural-redesign" class="slide level2">
 <h2>Infrastructure: Architectural redesign</h2>
@@ -651,7 +580,7 @@ Rokem Lab (UW)
 <li>dMRIPrep</li>
 <li>PETPrep</li>
 <li>NiBabies</li>
-<li>NiRodents</li>
+<li><span style="color: gray;">NiRodents</span></li>
 </ul></li>
 </ul>
 </div>
@@ -716,15 +645,12 @@ Rokem Lab (UW)
 </ul></li>
 </ul>
 </div><div class="column" style="width:60%;">
-<p>image here</p>
+<p><img data-src="images/nibabies.jpg" class="absolute" style="height: 85%; "></p>
 </div>
 </div>
 <div class="absolute" style="top: 95%; left: 50px; ">
 <p>Mathias Goncalves, <em>in prep</em></p>
 </div>
-</section>
-<section id="workflows-nirodents-rodent-mri" class="slide level2">
-<h2>Workflows: NiRodents (rodent MRI)</h2>
 </section>
 <section id="rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-2" class="slide level2">
 <h2>RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species</h2>
@@ -741,9 +667,7 @@ Rokem Lab (UW)
 </section>
 <section id="project-monitoring-migas" class="slide level2">
 <h2>Project monitoring: MIGAS</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="larger">
+<div style="font-size: 1.2em">
 <ul>
 <li>An open-source, customizable telemetry solution</li>
 <li>Allows collecting usage information, errors, and status throughout a process’s lifetime</li>
@@ -751,7 +675,8 @@ Rokem Lab (UW)
 <li>Available as a Python package: https://pypi.org/project/migas/</li>
 </ul>
 </div>
-</div>
+<div style="fig-align: center;">
+<p><img data-src="images/migas.png"></p>
 </div>
 <div class="absolute" style="top: 95%; left: 50px; ">
 <p>Mathias Goncalves, <em>in prep</em></p>
