@@ -116,9 +116,13 @@ Esteban et al., 2019, *Nature Methods*
 :::
 ::::
 
+:::{.callout-note}
+We are developing an open-source alternative called "migas", to replace Sentry
+:::
+
 ## NiPreps: An ecosystem of Neuroimaging Preprocessing Tools
 
-![](images/nipreps.jpg){.absolute top=75 left=150}
+![](https://www.nipreps.org/assets/nipreps-chart.png){.absolute top=75 left=150}
 
 
 ## The NiPreps community
@@ -131,7 +135,8 @@ Esteban et al., 2019, *Nature Methods*
 
 Poldracklab (Stanford)
 
-![](https://wp.unil.ch/connectomics/files/2020/10/OscarEsteban.jpg){height=300}
+![](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg){height=300}
+![](https://www.axonlab.org/images/teampic/provins.jpg){height=300}
 
 Esteban Lab (CHUV Lausanne)
 </div>
