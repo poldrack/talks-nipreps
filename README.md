@@ -3,7 +3,7 @@
 Talk about the NiPreps project
 
 
-### Single Tak in its Own Repo (STOR)
+### Single Talk in its Own Repo (STOR)
 
 This repository is built around the "Single talk in its Own Repo" (STOR) model.  Many researchers will give the same talk repeatedly over time, making changes with each presentation.  The STOR model maintains a single repository for that talk, with the main branch representing the current version of the talk.  
 
