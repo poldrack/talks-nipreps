@@ -127,8 +127,9 @@ We are developing an open-source alternative called "migas", to replace Sentry
 ![](https://www.nipreps.org/assets/nipreps-chart.png){.absolute top=75 left=150}
 
 
-## The NiPreps community
+## Nurturing a new community
 
+![](images/nipreps-community.png)
 
 ## Nipreps principles{visibility="hidden"}
 <div style="font-size: 1.2em">
@@ -210,7 +211,15 @@ We are developing an open-source alternative called "migas", to replace Sentry
 ::::
 </div>
 
-## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+## RF1MH121867: NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
+
+*... the overarching **objective of this project is to develop NiPreps**, a software framework to perform standardized preprocessing of diverse neuroimaging data.* 
+
+- Aim 1: solidify the foundations of the NiPreps integration.
+- Aim 2: enable integrative analysis approaches of heterogeneous data.
+- Aim 3: accelerate the dissemination of NiPreps to the neuroscience community through hackathons and "docusprints".
+
+## RF1MH121867: Sites
 
 :::: {.columns}
 
@@ -242,16 +251,18 @@ Esteban Lab (CHUV Lausanne)
 
 ::::
 
-## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
-<div style="font-size: 1.2em">
-- **Aim 1: Solidify and extend NiPreps infrastructure and middleware**
-    - TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases
-    - SDCflows: Integrating susceptibility distortion correction
-    - <span style="color: gray;">NiTransforms: Integrating spatial transforms</span>
-</div>
+## Aim 1: Solidify the foundations of the NiPreps integration.
+
+In addition to maintenance across the board and infrastructure (e.g., website), this aim focuses in four specific elements:
+
+- TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases
+- SDCflows: Integrating susceptibility distortion correction (SDC)
+- Modularization, and generalization of the Visual Reports System (NiReports)
+- Integrating preclinical imaging into NiPreps (NiRodents)
+- Spatial transforms integration (NiTransforms)
 
 
-## Middleware: TemplateFlow
+## TemplateFlow
 
 :::: {.columns}
 
@@ -274,8 +285,7 @@ Ciric et al., 2022, *Nature Methods*
 :::
 ::::
 
-
-## Middleware: SDCFlows (SDC = susceptibility distortion correction)
+## SDCFlows
 
 - **What?** Wraps or implements methods for **estimating** field maps in various scenarios:
     - covering (i) so-called *TOPUP*, (ii) phase-difference fieldmaps and their variants, (iii) *fMRIPrep*'s "fieldmapless"; but
@@ -297,6 +307,23 @@ Ciric et al., 2022, *Nature Methods*
     - Multiple correction implementations with different data structures
 :::
 
+## NiRodents
+
+- MRIQC adapted for rodent imaging saw a first release in April 2022
+- fMRIPrep-rodents is currently integrating SDCFlows, which requires some adaptations (e.g., FSL `topup` likes images of within the range of 1-2 mm isotropic resolution)
+- NiRodents has stimulated several improvements of the reporting system (see next)
+- NiRodents has stimulated the inclusion (and revision of existing) rodent templates in TemplateFlow
+
+## NiReports and NiTransforms (status report)
+
+- NiReports: provides standard mechanisms to build "reportlets" and full reports.
+    - A repository has been initiated
+    - Code already exists, but it is scattered across tools (e.g., MRIQC, fMRIPrep)
+    - In the OHBM Hackathon, work initiated for moving MRIQC visual components into it (fMRIPrep will follow).
+
+- NiTransforms:
+    - The component is in a stable status
+    - The component is key to achieving a redesign of fMRIPrep (described next)
 
 ## Infrastructure: Architectural redesign
 <div style="font-size: 1.2em">
