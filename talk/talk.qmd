@@ -130,7 +130,7 @@ We are developing an open-source alternative called "migas", to replace Sentry
 ## The NiPreps community
 
 
-## Nipreps principles
+## Nipreps principles{visibility="hidden"}
 <div style="font-size: 1.2em">
 :::: {.columns}
 ::: {.column width="50%"}
@@ -145,7 +145,7 @@ We are developing an open-source alternative called "migas", to replace Sentry
 ::::
 </div>
 
-## Nipreps principles
+## Nipreps principles{visibility="hidden"}
 <div style="font-size: 1.2em">
 :::: {.columns}
 
@@ -164,7 +164,7 @@ We are developing an open-source alternative called "migas", to replace Sentry
 ::::
 </div>
 
-## Nipreps principles
+## Nipreps principles{visibility="hidden"}
 <div style="font-size: 1.2em">
 :::: {.columns}
 
@@ -186,7 +186,7 @@ We are developing an open-source alternative called "migas", to replace Sentry
 ::::
 </div>
 
-## Nipreps principles
+## Nipreps principles{visibility="hidden"}
 <div style="font-size: 1.2em">
 :::: {.columns}
 
@@ -319,7 +319,7 @@ Ciric et al., 2022, *Nature Methods*
     - dMRIPrep
     - PETPrep
     - NiBabies
-    - NiRodents
+    - <span style="color: gray;">NiRodents</span>
 </div>
 
 ## Workflows: ASLPrep (cerebral blood flow quantification)
@@ -380,13 +380,12 @@ Martin Norgaard, *in prep*
   - T2 assisted surface generation
 :::
 ::: {.column width="60%"}
-image here
+![](images/nibabies.jpg){.absolute height=85%}
 :::
 ::::
 ::: {.absolute top=95% left=50}
 Mathias Goncalves, *in prep*
 :::
-## Workflows: NiRodents (rodent MRI)
 
 
 ## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
@@ -399,17 +398,15 @@ Mathias Goncalves, *in prep*
 </div>
 
 ## Project monitoring: MIGAS
-:::: {.columns}
-
-::: {.column width="70%"}
-<div class=larger>
+<div style='font-size: 1.2em'>
 - An open-source, customizable telemetry solution
 - Allows collecting usage information, errors, and status  throughout a process’s lifetime
 - Easy to deploy with various cloud providers (Heroku / GCP / AWS)
 - Available as a Python package: https://pypi.org/project/migas/
 </div>
-:::
-::::
+<div style="fig-align: center;">
+![](images/migas.png)
+</div>
 ::: {.absolute top=95% left=50}
 Mathias Goncalves, *in prep*
 :::
