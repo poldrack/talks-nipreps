@@ -289,8 +289,8 @@ Ciric et al., 2022, *Nature Methods*
     - Including alternative algorithms requires custom code to integrate.
 
 - Solution: Accept pre-computed derivatives and defer computationally cheap operations
+    - E.g., Deep learning segmentations and masks can be accepted, skipping fMRIPrep defaults.
     - Multiple template registrations can be archived, analysts may resample BOLD series to different spaces on demand.
-    - Deep learning segmentations and masks can be accepted, skipping fMRIPrep defaults.
 
 - This approach is implemented in SDCFlows and is being generalized to other components.
 </div>
