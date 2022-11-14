@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "talk.html#the-standard-design-anti-pattern-for-fmri-preprocessing",
+    "href": "talk.html#the-standard-design-anti-pattern-for-fmri-preprocessing",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "The standard design (anti-)pattern for fMRI preprocessing",
+    "text": "The standard design (anti-)pattern for fMRI preprocessing\n\n\n\n\nPick a single software package\n\nUsually based on considerations other than performance"
+  },
+  {
+    "objectID": "talk.html#the-standard-design-anti-pattern-for-fmri-preprocessing-1",
+    "href": "talk.html#the-standard-design-anti-pattern-for-fmri-preprocessing-1",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "The standard design (anti-)pattern for fMRI preprocessing",
+    "text": "The standard design (anti-)pattern for fMRI preprocessing\n\n\n\n\nPick a single software package\n\nUsually based on considerations other than performance\n\nString together the tools from that package into a script to run the preprocessing workflow"
+  },
+  {
+    "objectID": "talk.html#the-standard-design-anti-pattern-for-fmri-preprocessing-2",
+    "href": "talk.html#the-standard-design-anti-pattern-for-fmri-preprocessing-2",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "The standard design (anti-)pattern for fMRI preprocessing",
+    "text": "The standard design (anti-)pattern for fMRI preprocessing\n\n\n\n\nPick a single software package\n\nUsually based on considerations other than performance\n\nString together the tools from that package into a script to run the preprocessing workflow\n\nGenerallly written by a student or postdoc with little software engineering experience\n\nHope it keeps working over time…\nTrust that it does the right thing…"
+  },
+  {
+    "objectID": "talk.html#towards-a-new-design-pattern-for-fmri-preprocessing-fmriprep",
+    "href": "talk.html#towards-a-new-design-pattern-for-fmri-preprocessing-fmriprep",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Towards a new design pattern for fMRI preprocessing: fMRIPrep",
+    "text": "Towards a new design pattern for fMRI preprocessing: fMRIPrep\n\n\n\n\nA robust workflow for preprocessing fMRI data\n\nTested on a large number of fMRI datasets from OpenNeuro\nAdapts to each dataset to process it in the best way possible\nProvides a common interface to a variety of tools\nProvide visualization to help identify problems\n\n\n\n\n! \n\nEsteban et al., 2019, Nature Methods"
+  },
+  {
+    "objectID": "talk.html#fmriprep-usage",
+    "href": "talk.html#fmriprep-usage",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "fMRIPrep usage",
+    "text": "fMRIPrep usage\n\n\n\n\nUsage tracked using an opt-out telemetry system\n\nAllows quick identification of bugs and usage patterns"
+  },
+  {
+    "objectID": "talk.html#nipreps-an-ecosystem-of-neuroimaging-preprocessing-tools",
+    "href": "talk.html#nipreps-an-ecosystem-of-neuroimaging-preprocessing-tools",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "NiPreps: An ecosystem of Neuroimaging Preprocessing Tools",
+    "text": "NiPreps: An ecosystem of Neuroimaging Preprocessing Tools"
+  },
+  {
+    "objectID": "talk.html#the-nipreps-community",
+    "href": "talk.html#the-nipreps-community",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "The NiPreps community",
+    "text": "The NiPreps community\n\n\n\n\nPoldracklab (Stanford)\n\nEsteban Lab (CHUV Lausanne)\n\n\n\n\nSatterthwaite Lab (Penn)\n\n\nMilham Lab (Child Mind Inst)\n\n\n\n\nRokem Lab (UW)"
+  },
+  {
+    "objectID": "talk.html#nipreps-principles",
+    "href": "talk.html#nipreps-principles",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Nipreps principles",
+    "text": "Nipreps principles\n\n\n\n\nOpenness and community engagement\n\nAll work done in the open\nCommunity-driven decision making"
+  },
+  {
+    "objectID": "talk.html#nipreps-principles-1",
+    "href": "talk.html#nipreps-principles-1",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Nipreps principles",
+    "text": "Nipreps principles\n\n\n\n\nOpenness and community engagement\n\nAll work done in the open\nCommunity-driven decision making\n\nReproducibility and transparency\n\nContainerized applications following the BIDS-Apps specification\nDetailed visual reporting\nCitation boilerplate to ensure standards-compliant reporting"
+  },
+  {
+    "objectID": "talk.html#nipreps-principles-2",
+    "href": "talk.html#nipreps-principles-2",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Nipreps principles",
+    "text": "Nipreps principles\n\n\n\n\nOpenness and community engagement\n\nAll work done in the open\nCommunity-driven decision making\n\nReproducibility and transparency\n\nContainerized applications following the BIDS-Apps specification\nDetailed visual reporting\nCitation boilerplate to ensure standards-compliant reporting\n\n\n\n\nGenerality, consistency, and robustness\n\nFully based on the BIDS and BIDS-Derivatives standards\nTested using continuous integration"
+  },
+  {
+    "objectID": "talk.html#nipreps-principles-3",
+    "href": "talk.html#nipreps-principles-3",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Nipreps principles",
+    "text": "Nipreps principles\n\n\n\n\nOpenness and community engagement\n\nAll work done in the open\nCommunity-driven decision making\n\nReproducibility and transparency\n\nContainerized applications following the BIDS-Apps specification\nDetailed visual reporting\nCitation boilerplate to ensure standards-compliant reporting\n\n\n\n\nGenerality, consistency, and robustness\n\nFully based on the BIDS and BIDS-Derivatives standards\nTested using continuous integration\n\nModularity and longevity potential\n\nReusable middleware components"
+  },
+  {
+    "objectID": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species",
+    "href": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species",
+    "text": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species\n\n\nAim 1: Solidify and extend NiPreps infrastructure and middleware\n\nTemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases\nSDCflows: Integrating susceptibility distortion correction\nNiTransforms: Integrating spatial transforms"
+  },
+  {
+    "objectID": "talk.html#middleware-templateflow",
+    "href": "talk.html#middleware-templateflow",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Middleware: TemplateFlow",
+    "text": "Middleware: TemplateFlow\n\n\n\nTemplates and atlases are commonly used in neuroimaging research\nThere is significant lack of clarity in the use of these templates\n\nThere are numerous versions of the widely used “MNI template”\n\nTemplateflow provides programmatic access to a database of templates and mappings between them\nPython API client:\n\n\n\nCiric et al., 2022, Nature Methods"
+  },
+  {
+    "objectID": "talk.html#middleware-sdcflows",
+    "href": "talk.html#middleware-sdcflows",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Middleware: SDCFlows",
+    "text": "Middleware: SDCFlows"
+  },
+  {
+    "objectID": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-1",
+    "href": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-1",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species",
+    "text": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species\n\n\nAim 2: Expand the portfolio of end-user NiPreps\n\nASLPrep\ndMRIPrep\nPETPrep\nNiBabies\nNiRodents"
+  },
+  {
+    "objectID": "talk.html#workflows-aslprep-cerebral-blood-flow-quantification",
+    "href": "talk.html#workflows-aslprep-cerebral-blood-flow-quantification",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Workflows: ASLPrep (cerebral blood flow quantification)",
+    "text": "Workflows: ASLPrep (cerebral blood flow quantification)\n\n\n\nA robust workflow for preprocessing arterial spin labeling (ASL) data\n\nIncluding cerebral blood flow (CBF) quantification\nProvides quality evaluation for CBF maps\nProvides CBF quantification at the regional level using atlases\n\n\n\n\n\nAdepimbe et al., 2022, Nature Methods"
+  },
+  {
+    "objectID": "talk.html#workflows-dmriprep-diffusion-mri",
+    "href": "talk.html#workflows-dmriprep-diffusion-mri",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Workflows: dMRIPrep (diffusion MRI)",
+    "text": "Workflows: dMRIPrep (diffusion MRI)"
+  },
+  {
+    "objectID": "talk.html#workflows-petprep-positron-emission-tomography",
+    "href": "talk.html#workflows-petprep-positron-emission-tomography",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Workflows: PETPrep (positron emission tomography)",
+    "text": "Workflows: PETPrep (positron emission tomography)\n\n\n\nA NiPreps workflow for PET preprocessing\n\nSuccessfully merged petsurfer into nipype (1.8.0)\nIncorporated nipype implementation of a robust head motion correction workflow (petprep_hmc)\nDeveloping a BIDS-Derivatives standard for PET derivatives\n\n\n\n\n\nMartin Norgaard, in prep"
+  },
+  {
+    "objectID": "talk.html#workflows-nibabies-infant-human-mri",
+    "href": "talk.html#workflows-nibabies-infant-human-mri",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Workflows: NiBabies (infant human MRI)",
+    "text": "Workflows: NiBabies (infant human MRI)\n\n\n\nCollaboraration with Damien Fair & HBCD team\nNew developments\n\nSupport for pre-computed derivatives (mask, segmentations).\nImproved robustness and validity of CIFTI-2 outputs.\n\nUpcoming developments\n\nMorphometric outputs (cortical thickness, curvature)\nImprovements to susceptibility distortion correction versatility\nT2 assisted surface generation\n\n\n\nimage here\n\n\n\nMathias Goncalves, in prep"
+  },
+  {
+    "objectID": "talk.html#workflows-nirodents-rodent-mri",
+    "href": "talk.html#workflows-nirodents-rodent-mri",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Workflows: NiRodents (rodent MRI)",
+    "text": "Workflows: NiRodents (rodent MRI)"
+  },
+  {
+    "objectID": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-2",
+    "href": "talk.html#rf1mh121867-nipreps-integrating-neuroimaging-preprocessing-workflows-across-modalities-populations-and-species-2",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species",
+    "text": "RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species\n\n\nAim 3: Consolidate the NiPreps community\n\nProject monitoring infrastructure: MIGAS\nEvaluation of cross-workflow reproducibility\nHackathons and documentation"
+  },
+  {
+    "objectID": "talk.html#project-monitoring-migas",
+    "href": "talk.html#project-monitoring-migas",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Project monitoring: MIGAS",
+    "text": "Project monitoring: MIGAS\n\n\n\n\nAn open-source, customizable telemetry solution\nAllows collecting usage information, errors, and status throughout a process’s lifetime\nEasy to deploy with various cloud providers (Heroku / GCP / AWS)\nAvailable as a Python package: https://pypi.org/project/migas/\n\n\n\n\n\nMathias Goncalves, in prep"
+  },
+  {
+    "objectID": "talk.html#reproducibility-cross-workflow-evaluation",
+    "href": "talk.html#reproducibility-cross-workflow-evaluation",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Reproducibility: Cross-workflow evaluation",
+    "text": "Reproducibility: Cross-workflow evaluation\n\n\n\nCMI team developed a CPAC implementation of fMRIPrep\n\nAble to achieve high levels of reproducibility in connectivity metrics between harmonized workflows\nHelped identify causes of divergence, such as use of different versions of MNI template\n\n\n\n\n\n\n\nXinhui Li et al., under review"
+  },
+  {
+    "objectID": "talk.html#hackathons-and-documentation",
+    "href": "talk.html#hackathons-and-documentation",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "Hackathons and documentation",
+    "text": "Hackathons and documentation\n\n\nHeld a hackathon/documentation sprint in Glasgow following OHBM 2022\nWill participate in Brainhack Global 2022\nPlanning to hold a hackathon/documentation sprint in Montreal in association with OHBM 2023"
+  }
+]
