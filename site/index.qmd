@@ -5,7 +5,7 @@
 
 [Current version of talk](talk/)
 
-### Archived versions
+### Archived releases
 
 ```{python}
 
@@ -20,18 +20,21 @@ import requests
 from git import Repo
 import os
 
-with open('.token') as f:
-    token = f.read().strip()
 
 # get info about present repo
-repo_obj = Repo('.')
-repo_name = repo.remotes.origin.url.split(':')[1].split('.')[0]
+assert os.path.exists('../.git'), 'This code must be run from within the site subdirectory'
+repo_obj = Repo('../')
+repo_name = repo_obj.remotes.origin.url.split(':')[1].split('.')[0]
 
 ## use github api to find releases
 # Github username
 username = "poldrack"
 # pygithub object
-g = Github(os.path.join(repo_obj.working_dir, '.token'))
+
+with open(os.path.join(repo_obj.working_dir, '.token')) as f:
+    token = f.read().strip()
+
+g = Github(token)
 
 # get that user by username
 user = g.get_user(username)
@@ -42,7 +45,7 @@ releases = list(repo_info.get_releases())
 
 for release in releases:
     release_date = release.published_at.strftime('%D')
-    print(f'{release_date} - [{release.title}]({release.html_url})')
+    print(f'{release_date}: [{release.title}]({release.html_url})')
 
 ```
 
