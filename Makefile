@@ -5,7 +5,7 @@ all: render-talk render-site render-pdf
 
 render-talk:
 	-rm -rf docs/talk/*
-	cd talk && quarto render NiPreps.qmd
+	cd talk && quarto render talk.qmd
 	# fix quarto bug
 	# need to use sed inline mode
 	-git add docs/talk/images/*
@@ -23,7 +23,7 @@ render-site:
 
 render-pdf:
 	-mkdir docs/pdfs
-	decktape reveal docs/talk/NiPreps.html docs/pdfs/$(VERSION).pdf
+	decktape reveal docs/talk/talk.html docs/pdfs/$(VERSION).pdf
 	git add docs/pdfs/$(VERSION).pdf
 	git commit -m"adding pdf [skip ci]"
 	git push origin main
