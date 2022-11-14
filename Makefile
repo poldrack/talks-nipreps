@@ -4,7 +4,7 @@ VERSION = "NiPreps_BRAIN_Nov2022"
 all: render-talk render-site render-pdf
 
 render-talk:
-	-rm -rf docs/talk/*
+	-git rm -rf docs/talk/*
 	cd talk && quarto render talk.qmd
 	# fix quarto bug
 	# need to use sed inline mode
