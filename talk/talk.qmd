@@ -17,55 +17,6 @@ format:
     width: 1920
 ---
 
-## RF1MH121867: NiPreps (NeuroImaging PREProcessing toolS)
-
-**Title**: *NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species*
-
-*... the overarching **objective of this project is to develop NiPreps**, a software framework to perform standardized preprocessing of diverse neuroimaging data.* 
-
-- Aim 1: solidify the foundations of the NiPreps integration.
-- Aim 2: enable integrative analysis approaches of heterogeneous data.
-- Aim 3: accelerate the dissemination of NiPreps to the neuroscience community through hackathons and "docusprints".
-
-:::{.callout-note}
-## Why?
-
-In developing fMRIPrep, we learned critical aspects of the fMRI neuroimaging workflows.
-NiPreps is envisioned as a generalization of fMRIPrep.
-:::
-
-## RF1MH121867: Sites
-
-:::: {.columns}
-
-::: {.column width="33%"}
-<div class=centered >
-![](images/poldracklab.jpg){height=350}
-
-Poldracklab (Stanford)
-
-![](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg){height=300}
-![](https://www.axonlab.org/images/teampic/provins.jpg){height=300}
-
-Esteban Lab (CHUV Lausanne)
-</div>
-:::
-
-::: {.column width="33%"}
-![](images/tedlab.png){.centered}
-
-<div class=centered >Satterthwaite Lab (Penn)</div>
-
-<div class=centered >Milham Lab (Child Mind Inst)</div>
-:::
-
-::: {.column width="33%"}
-![](images/rokemlab.jpg)
-<div class=centered >Rokem Lab (UW)</div>
-:::
-
-::::
-
 ## The standard design (anti-)pattern for fMRI preprocessing
 
 :::: {.columns}
@@ -169,6 +120,55 @@ Esteban et al., 2019, *Nature Methods*
 :::{.callout-note}
 We are developing an open-source alternative called "migas", to replace Sentry
 :::
+
+## RF1MH121867: NiPreps (NeuroImaging PREProcessing toolS)
+
+**Title**: *NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species*
+
+*... the overarching **objective of this project is to develop NiPreps**, a software framework to perform standardized preprocessing of diverse neuroimaging data.* 
+
+- Aim 1: solidify the foundations of the NiPreps integration.
+- Aim 2: enable integrative analysis approaches of heterogeneous data.
+- Aim 3: accelerate the dissemination of NiPreps to the neuroscience community through hackathons and "docusprints".
+
+:::{.callout-note}
+## Why?
+
+In developing fMRIPrep, we learned critical aspects of the fMRI neuroimaging workflows.
+NiPreps is envisioned as a generalization of fMRIPrep.
+:::
+
+## RF1MH121867: Sites
+
+:::: {.columns}
+
+::: {.column width="33%"}
+<div class=centered >
+![](images/poldracklab.jpg){height=350}
+
+Poldracklab (Stanford)
+
+![](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg){height=300}
+![](https://www.axonlab.org/images/teampic/provins.jpg){height=300}
+
+Esteban Lab (CHUV Lausanne)
+</div>
+:::
+
+::: {.column width="33%"}
+![](images/tedlab.png){.centered}
+
+<div class=centered >Satterthwaite Lab (Penn)</div>
+
+<div class=centered >Milham Lab (Child Mind Inst)</div>
+:::
+
+::: {.column width="33%"}
+![](images/rokemlab.jpg)
+<div class=centered >Rokem Lab (UW)</div>
+:::
+
+::::
 
 ## NiPreps: deconstructing fMRIPrep in reusable modules
 
