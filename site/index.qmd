@@ -43,9 +43,14 @@ user = g.get_user(username)
 repo_info = g.get_repo(repo_name)
 releases = list(repo_info.get_releases())
 
+site_base = 'https://poldrack.github.io/' + repo_name.split('/')[-1]
+
 for release in releases:
     release_date = release.published_at.strftime('%D')
-    print(f'{release_date}: [{release.title}]({release.html_url})')
+    print(f'{release_date}: {release.title}')
+    print(f"\n- [PDF]({os.path.join(site_base, 'pdfs', release.tag_name + '.pdf')}) [Full release]({release.html_url})")
+    print('\n\n')
+
 
 ```
 

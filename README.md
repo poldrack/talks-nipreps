@@ -7,13 +7,13 @@ Talk about the NiPreps project
 
 This repository is built around the "Single talk in its Own Repo" (STOR) model.  Many researchers will give the same talk repeatedly over time, making changes with each presentation.  The STOR model maintains a single repository for that talk, with the main branch representing the current version of the talk.  
 
-The version name of the current talk is set within the Makefile, e.g.:
+The version tag of the current talk is set within the Makefile, e.g.:
 
-`VERSION = "NiPreps_BRAIN_Nov2022"`
+`TAG = "NiPreps_BRAIN_11_17_2022"`
 
-This name is used to generate the PDF file, which is stored in `docs/pdfs` and is meant as the archival version of the talk.  The current talk is rendered in `docs/talk/talk.html` and is not stored for archival purposes (i.e. it is overwritten on each push).  
+The scheme for the tag is `TalkName_Venue_Month_Day_Year`.  This tag is used to generate the PDF file, which is stored in `docs/pdfs` and is meant as the archival version of the talk.  The current talk is rendered in `docs/talk/talk.html` and is not stored for archival purposes (i.e. it is overwritten on each push). 
 
-*TBD*: it would be useful to label the latest git commit for each talk version on the site, so that it would be easy to get back to it if one wanted to easily be able to re-render the HTML version (which seems like an unlikely use case).
+When the talk is completed, a new release should be generated on Github.  The tag used for this release *must* match the tag used in the Makefile in order for the PDF file to be found by the site building code.
 
 
 ### Organization

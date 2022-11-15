@@ -2,7 +2,7 @@
 TAG = "NiPreps_BRAINInformatics_11_17_2022"
 
 
-all: render-talk render-site render-pdf
+all: render-talk render-pdf render-site
 
 render-talk:
 	-git rm -rf docs/talk/*
