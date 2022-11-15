@@ -96,11 +96,10 @@ format:
 :::
 
 ::: {.column width="60%"}
-!
 ![](images/fmriprep.jpg)
+Esteban et al., 2019, *Nature Methods*
 :::
 ::: {.absolute top=95% left=50}
-Esteban et al., 2019, *Nature Methods*
 :::
 ::::
 
@@ -122,7 +121,56 @@ Esteban et al., 2019, *Nature Methods*
 We are developing an open-source alternative called "migas", to replace Sentry
 :::
 
-## NiPreps: An ecosystem of Neuroimaging Preprocessing Tools
+## RF1MH121867: NiPreps (NeuroImaging PREProcessing toolS)
+
+**Title**: *NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species*
+
+*... the overarching **objective of this project is to develop NiPreps**, a software framework to perform standardized preprocessing of diverse neuroimaging data.* 
+
+- Aim 1: solidify the foundations of the NiPreps integration.
+- Aim 2: enable integrative analysis approaches of heterogeneous data.
+- Aim 3: accelerate the dissemination of NiPreps to the neuroscience community through hackathons and "docusprints".
+
+:::{.callout-note}
+## Why?
+
+In developing fMRIPrep, we learned critical aspects of the fMRI neuroimaging workflows.
+NiPreps is envisioned as a generalization of fMRIPrep.
+:::
+
+## RF1MH121867: Sites
+
+:::: {.columns}
+
+::: {.column width="33%"}
+<div class=centered >
+![](images/poldracklab.jpg){height=350}
+
+Poldracklab (Stanford)
+
+![](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg){height=300}
+![](https://www.axonlab.org/images/teampic/provins.jpg){height=300}
+
+Esteban Lab (CHUV Lausanne)
+</div>
+:::
+
+::: {.column width="33%"}
+![](images/tedlab.png){.centered}
+
+<div class=centered >Satterthwaite Lab (Penn)</div>
+
+<div class=centered >Milham Lab (Child Mind Inst)</div>
+:::
+
+::: {.column width="33%"}
+![](images/rokemlab.jpg)
+<div class=centered >Rokem Lab (UW)</div>
+:::
+
+::::
+
+## NiPreps: deconstructing fMRIPrep in reusable modules
 
 ![](https://www.nipreps.org/assets/nipreps-chart.png){.absolute top=75 left=150}
 
@@ -131,6 +179,273 @@ We are developing an open-source alternative called "migas", to replace Sentry
 
 ![](images/nipreps-community.png)
 
+www.nipreps.org
+
+## Aim 1: Solidify the foundations of the NiPreps integration.
+
+In addition to maintenance across the board and infrastructure (e.g., website), this aim focuses in four specific elements:
+
+- TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases
+- SDCflows: Integrating susceptibility distortion correction (SDC)
+- Modularization, and generalization of the Visual Reports System (NiReports)
+- Integrating preclinical imaging into NiPreps (NiRodents)
+- Spatial transforms integration (NiTransforms)
+
+
+## Result YR1: TemplateFlow is mature
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Templates and atlases are commonly used in neuroimaging research
+- There is significant lack of clarity in the use of these templates
+    - There are numerous versions of the widely used “MNI template”
+- Templateflow provides programmatic access to a database of templates and mappings between them
+
+- Easy to use for humans and machines:
+
+![](images/templateflow_cli.jpg)
+:::
+::: {.absolute top=95% left=50}
+:::
+
+::: {.column width="50%"}
+![](images/templateflow_fig-templates.png)
+Ciric et al., 2022, *Nature Methods*
+:::
+::::
+
+## Result YR1: SDCFlows overhaul
+
+:::{.callout-note}
+## SDC is a significant source of analytical flexibility in functional and diffusion MRI processing
+<div style="font-size: 0.8em">
+- Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof
+- Multiple correction implementations with different data structures
+</div>
+:::
+
+::: {.column width="45%"}
+- Overhaul started early 2021 ([Esteban et al., OHBM 2021](https://doi.org/10.31219/osf.io/gy8nt))
+- Faced many technical challenges → numerous bugfixes
+    - vast amount of "edge" cases
+- Opacity of the problem itself → educational materials
+    - Jupyter notebooks
+:::
+
+::: {.column width="45%"}
+![](images/sdcflows-notebook.png)
+:::
+
+## SDCFlows in a nutshell
+
+- **What?** Wraps or implements methods for **estimating** field maps in various scenarios:
+    - covering (i) so-called *TOPUP*, (ii) phase-difference fieldmaps and their variants, (iii) *fMRIPrep*'s "fieldmapless"; but
+    - it does not cover point-spread-function approaches (extremely marginal).
+
+- **How?**
+    - Defines a shared representation model (B-Spline) for the field map (comparability ↑↑, methodological variability ↓↓)
+    - Technical perk: "decouples" estimation and application steps (modularity ↑↑, methodological variability ↑).
+
+- **Why?**
+    - A single tool can be applied to correct for distortion, no matter how it was estimated (method comparability ↑↑)
+    - The model coefficients can easily be moved with head motion (e.g., dynamic fieldmap)
+    - The model coefficients can easily be integrated in spatial transformation chains (one-shot interpolation)
+    - The model coefficients can easily be integrated within other software (e.g., eddymotion)
+
+## Result YR1: new visualizations in MRIQC and fMRIPrep
+![](images/celine-carpet-improvement.png)
+([Provins et al., ISMRM 2022](https://doi.org/10.31219/osf.io/hz52v))
+
+- Added visualization of voxels at the edge of the brain ("crown")
+- Added hierarchical sorting of rows (voxels) to enhance patterns (Aquino et al. 2019)
+- fMRIPrep: added "edge" regressors (Patriat et al. 2008)
+
+## Result YR1: NiRodents
+
+::: {.column width="50%"}
+- MRIQC-rodents saw a first release presented in EMIM 2022
+- fMRIPrep-rodents is currently integrating new SDCFlows' API
+- NiRodents has stimulated several improvements of the reporting system (see next)
+- NiRodents has stimulated the inclusion (and revision of existing) rodent templates in TemplateFlow
+:::
+
+::: {.column width="50%"}
+![](images/Macnicol_EMIM2022.png)
+:::
+
+## Results YR1: Other areas
+
+- NiReports: provides standard mechanisms to build "reportlets" and full reports.
+    - A repository has been initiated
+    - Code already exists, but it is scattered across tools (e.g., MRIQC, fMRIPrep)
+    - In the OHBM Hackathon, work initiated for moving MRIQC visual components into it (fMRIPrep will follow).
+
+- NiTransforms:
+    - The component is in a stable status
+    - The component is key to achieving a redesign of fMRIPrep (described next)
+
+## Infrastructure: Architectural redesign
+<div style="font-size: 1.2em">
+- Problem: fMRIPrep's "one size fits all" design has limitations for emerging use cases
+    - Archiving preprocessing results requires balancing storage costs against possible use cases.
+    - Including alternative algorithms requires custom code to integrate.
+
+- Solution: Accept pre-computed derivatives and defer computationally cheap operations
+    - E.g., Deep learning segmentations and masks can be accepted, skipping fMRIPrep defaults.
+    - Multiple template registrations can be archived, analysts may resample BOLD series to different spaces on demand.
+
+- This approach is implemented in SDCFlows and is being generalized to other components.
+</div>
+
+## Aim 2: Expand the portfolio of end-user NiPreps
+
+- ASLPrep
+- dMRIPrep
+- PETPrep
+- fMRIPrep-infants (based on *NiBabies*)
+
+## Workflows: ASLPrep (cerebral blood flow quantification)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- **A robust workflow for preprocessing arterial spin labeling (ASL) data**
+  - Including cerebral blood flow (CBF) quantification
+  - Provides quality evaluation for CBF maps
+  - Provides CBF quantification at the regional level using atlases
+:::
+::: {.column width="50%"}
+![](images/aslprep.png){.absolute height=90%}
+:::
+::: {.absolute top=95% left=50}
+Adepimbe et al., 2022, *Nature Methods*
+:::
+::::
+
+
+## Workflows: dMRIPrep (diffusion MRI)
+
+Development directed toward *eddymotion*, an algorithm to estimate head-motion (modality-agnostic) and modality-specific artifacts (eddy currents in the case of dMRI):
+
+![](https://github.com/nipreps/eddymotion/raw/main/docs/_static/eddymotion-flowchart.svg)
+
+
+Preprint: [Pisner et al., 2022](https://doi.org/10.31219/osf.io/wxfd5).
+
+## Workflows: PETPrep (positron emission tomography)
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- **A NiPreps workflow for PET preprocessing**
+  - Successfully merged petsurfer into nipype (1.8.0)
+  - Incorporated nipype implementation of a robust head motion correction workflow (petprep_hmc)
+  - Developing a BIDS-Derivatives standard for PET derivatives
+  - Model-based head-motion correction leveraging *eddymotion* in progress
+:::
+
+::: {.column width="60%"}
+![](images/petprep_outputs.png)
+:::
+::: {.absolute top=95% left=50}
+Martin Norgaard, *in prep*
+:::
+
+::::
+
+## Workflows: fMRIPrep for infants
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+- Collaboraration with Damien Fair & HBCD team
+- **New developments**
+  - Support for pre-computed derivatives (mask, segmentations).
+  - Improved robustness and validity of CIFTI-2 outputs.
+- **Upcoming developments**
+  - Morphometric outputs (cortical thickness, curvature)
+  - Improvements to susceptibility distortion correction versatility
+  - T2 assisted surface generation
+:::
+::: {.column width="60%"}
+![](images/nibabies.jpg){.absolute height=85%}
+:::
+::::
+::: {.absolute top=95% left=50}
+Mathias Goncalves, *in prep*
+:::
+
+
+## Aim 3: Consolidate the NiPreps community
+
+- Project monitoring infrastructure: MIGAS
+- Evaluation of cross-workflow reproducibility
+- Hackathons and documentation
+- Best practices and educational resources
+
+## Project monitoring: MIGAS
+<div style='font-size: 1.2em'>
+- An open-source, customizable telemetry solution
+- Allows collecting usage information, errors, and status  throughout a process’s lifetime
+- Easy to deploy with various cloud providers (Heroku / GCP / AWS)
+- Available as a Python package: https://pypi.org/project/migas/
+</div>
+<div style="fig-align: center;">
+![](images/migas.png)
+</div>
+::: {.absolute top=95% left=50}
+Mathias Goncalves, *in prep*
+:::
+
+## Reproducibility: Cross-workflow evaluation
+:::: {.columns}
+
+::: {.column width="30%"}
+- CMI team developed a CPAC implementation of fMRIPrep
+  - Able to achieve high levels of reproducibility in connectivity metrics between harmonized workflows
+  - Helped identify causes of divergence, such as use of different versions of MNI template
+
+:::
+::: {.column width="70%"}
+![](images/li_figure1.jpg)
+:::
+::::
+::: {.absolute top=95% left=50}
+Xinhui Li et al., *under review*
+:::
+
+## Hackathons and documentation
+
+<div style="font-size: 1.2em">
+- Held a hackathon/documentation sprint in Glasgow following OHBM 2022
+- Will participate in Brainhack Global 2022
+- Planning to hold a hackathon/documentation sprint in Montreal in association with OHBM 2023
+
+
+## Results YR1: Best practices and educational resources
+
+- Collaborative QC-Book (educational, ISMRM 2021): https://nipreps.org/qc-book
+
+- MRIQC-SOPs (standard operating procedures)
+    - A GitHub template-repository to create and maintain versioned SOPs documentation and checklists.
+    - Example: https://nipreps.org/mriqc-sops/
+
+- MRIQC Protocol report (Hagen et al., in preparation)
+
+- Frontiers' research topic on QC of fMRI (Provins et al., under review)
+
+- Biases introduced by defacing in QC (Provins et al., pre-registered report under review)
+
+- MRIQC extension to dMRI - under development
+
+--- 
+<div style='position=absolute;top:90%;width:100%;text-align:center;font-size:100px;'>
+Thank you!
+</div>
+
+<!-- back up of hidden slides below -->
 ## Nipreps principles{visibility="hidden"}
 <div style="font-size: 1.2em">
 :::: {.columns}
@@ -209,259 +524,4 @@ We are developing an open-source alternative called "migas", to replace Sentry
     - Reusable middleware components
 :::
 ::::
-</div>
-
-## RF1MH121867: NiPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
-
-*... the overarching **objective of this project is to develop NiPreps**, a software framework to perform standardized preprocessing of diverse neuroimaging data.* 
-
-- Aim 1: solidify the foundations of the NiPreps integration.
-- Aim 2: enable integrative analysis approaches of heterogeneous data.
-- Aim 3: accelerate the dissemination of NiPreps to the neuroscience community through hackathons and "docusprints".
-
-## RF1MH121867: Sites
-
-:::: {.columns}
-
-::: {.column width="33%"}
-<div class=centered >
-![](images/poldracklab.jpg){height=350}
-
-Poldracklab (Stanford)
-
-![](https://www.axonlab.org/images/teampic/OscarEsteban-300x300.jpg){height=300}
-![](https://www.axonlab.org/images/teampic/provins.jpg){height=300}
-
-Esteban Lab (CHUV Lausanne)
-</div>
-:::
-
-::: {.column width="33%"}
-![](images/tedlab.png){.centered}
-
-<div class=centered >Satterthwaite Lab (Penn)</div>
-
-<div class=centered >Milham Lab (Child Mind Inst)</div>
-:::
-
-::: {.column width="33%"}
-![](images/rokemlab.jpg)
-<div class=centered >Rokem Lab (UW)</div>
-:::
-
-::::
-
-## Aim 1: Solidify the foundations of the NiPreps integration.
-
-In addition to maintenance across the board and infrastructure (e.g., website), this aim focuses in four specific elements:
-
-- TemplateFlow: FAIR Sharing and management of neuroimaging templates and atlases
-- SDCflows: Integrating susceptibility distortion correction (SDC)
-- Modularization, and generalization of the Visual Reports System (NiReports)
-- Integrating preclinical imaging into NiPreps (NiRodents)
-- Spatial transforms integration (NiTransforms)
-
-
-## TemplateFlow
-
-:::: {.columns}
-
-::: {.column width="50%"}
-- Templates and atlases are commonly used in neuroimaging research
-- There is significant lack of clarity in the use of these templates
-    - There are numerous versions of the widely used “MNI template”
-- Templateflow provides programmatic access to a database of templates and mappings between them
-
-- Python API client:
-
-![](images/templateflow_cli.jpg)
-:::
-::: {.absolute top=95% left=50}
-Ciric et al., 2022, *Nature Methods*
-:::
-
-::: {.column width="50%"}
-![](images/templateflow_fig-templates.png)
-:::
-::::
-
-## SDCFlows
-
-- **What?** Wraps or implements methods for **estimating** field maps in various scenarios:
-    - covering (i) so-called *TOPUP*, (ii) phase-difference fieldmaps and their variants, (iii) *fMRIPrep*'s "fieldmapless"; but
-    - it does not cover point-spread-function approaches (extremely marginal).
-
-- **How?**
-    - Defines a shared representation model (B-Spline) for the field map (comparability ↑↑, methodological variability ↓↓)
-    - Technical perk: "decouples" estimation and application steps (modularity ↑↑, methodological variability ↑).
-
-- **Why?**
-    - A single tool can be applied to correct for distortion, no matter how it was estimated (method comparability ↑↑)
-    - The model coefficients can easily be moved with head motion (e.g., dynamic fieldmap)
-    - The model coefficients can easily be integrated in spatial transformation chains (one-shot interpolation)
-    - The model coefficients can easily be integrated within other software (e.g., eddymotion)
-
-:::{.callout-note}
-## SDC is a significant source of analytical flexibility in functional and diffusion MRI processing
-    - Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof
-    - Multiple correction implementations with different data structures
-:::
-
-## NiRodents
-
-- MRIQC adapted for rodent imaging saw a first release in April 2022
-- fMRIPrep-rodents is currently integrating SDCFlows, which requires some adaptations (e.g., FSL `topup` likes images of within the range of 1-2 mm isotropic resolution)
-- NiRodents has stimulated several improvements of the reporting system (see next)
-- NiRodents has stimulated the inclusion (and revision of existing) rodent templates in TemplateFlow
-
-## NiReports and NiTransforms (status report)
-
-- NiReports: provides standard mechanisms to build "reportlets" and full reports.
-    - A repository has been initiated
-    - Code already exists, but it is scattered across tools (e.g., MRIQC, fMRIPrep)
-    - In the OHBM Hackathon, work initiated for moving MRIQC visual components into it (fMRIPrep will follow).
-
-- NiTransforms:
-    - The component is in a stable status
-    - The component is key to achieving a redesign of fMRIPrep (described next)
-
-## Infrastructure: Architectural redesign
-<div style="font-size: 1.2em">
-- Problem: fMRIPrep's "one size fits all" design has limitations for emerging use cases
-    - Archiving preprocessing results requires balancing storage costs against possible use cases.
-    - Including alternative algorithms requires custom code to integrate.
-
-- Solution: Accept pre-computed derivatives and defer computationally cheap operations
-    - E.g., Deep learning segmentations and masks can be accepted, skipping fMRIPrep defaults.
-    - Multiple template registrations can be archived, analysts may resample BOLD series to different spaces on demand.
-
-- This approach is implemented in SDCFlows and is being generalized to other components.
-</div>
-
-## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
-<div style="font-size: 1.2em">
-
-- **Aim 2: Expand the portfolio of end-user NiPreps**
-    - ASLPrep
-    - dMRIPrep
-    - PETPrep
-    - NiBabies
-    - <span style="color: gray;">NiRodents</span>
-</div>
-
-## Workflows: ASLPrep (cerebral blood flow quantification)
-
-:::: {.columns}
-
-::: {.column width="50%"}
-- **A robust workflow for preprocessing arterial spin labeling (ASL) data**
-  - Including cerebral blood flow (CBF) quantification
-  - Provides quality evaluation for CBF maps
-  - Provides CBF quantification at the regional level using atlases
-:::
-::: {.column width="50%"}
-![](images/aslprep.png){.absolute height=90%}
-:::
-::: {.absolute top=95% left=50}
-Adepimbe et al., 2022, *Nature Methods*
-:::
-::::
-
-
-## Workflows: dMRIPrep (diffusion MRI)
-
-
-## Workflows: PETPrep (positron emission tomography)
-
-:::: {.columns}
-
-::: {.column width="40%"}
-- **A NiPreps workflow for PET preprocessing**
-  - Successfully merged petsurfer into nipype (1.8.0)
-  - Incorporated nipype implementation of a robust head motion correction workflow (petprep_hmc)
-  - Developing a BIDS-Derivatives standard for PET derivatives
-:::
-
-::: {.column width="60%"}
-![](images/petprep_outputs.png)
-:::
-::: {.absolute top=95% left=50}
-Martin Norgaard, *in prep*
-:::
-
-::::
-
-## Workflows: NiBabies (infant human MRI)
-
-:::: {.columns}
-
-::: {.column width="40%"}
-
-- Collaboraration with Damien Fair & HBCD team
-- **New developments**
-  - Support for pre-computed derivatives (mask, segmentations).
-  - Improved robustness and validity of CIFTI-2 outputs.
-- **Upcoming developments**
-  - Morphometric outputs (cortical thickness, curvature)
-  - Improvements to susceptibility distortion correction versatility
-  - T2 assisted surface generation
-:::
-::: {.column width="60%"}
-![](images/nibabies.jpg){.absolute height=85%}
-:::
-::::
-::: {.absolute top=95% left=50}
-Mathias Goncalves, *in prep*
-:::
-
-
-## RF1MH121867: NIPreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species
-<div style="font-size: 1.2em">
-
-- **Aim 3: Consolidate the NiPreps community**
-    - Project monitoring infrastructure: MIGAS
-    - Evaluation of cross-workflow reproducibility
-    - Hackathons and documentation
-</div>
-
-## Project monitoring: MIGAS
-<div style='font-size: 1.2em'>
-- An open-source, customizable telemetry solution
-- Allows collecting usage information, errors, and status  throughout a process’s lifetime
-- Easy to deploy with various cloud providers (Heroku / GCP / AWS)
-- Available as a Python package: https://pypi.org/project/migas/
-</div>
-<div style="fig-align: center;">
-![](images/migas.png)
-</div>
-::: {.absolute top=95% left=50}
-Mathias Goncalves, *in prep*
-:::
-
-## Reproducibility: Cross-workflow evaluation
-:::: {.columns}
-
-::: {.column width="30%"}
-- CMI team developed a CPAC implementation of fMRIPrep
-  - Able to achieve high levels of reproducibility in connectivity metrics between harmonized workflows
-  - Helped identify causes of divergence, such as use of different versions of MNI template
-
-:::
-::: {.column width="70%"}
-![](images/li_figure1.jpg)
-:::
-::::
-::: {.absolute top=95% left=50}
-Xinhui Li et al., *under review*
-:::
-
-## Hackathons and documentation
-
-<div style="font-size: 1.2em">
-- Held a hackathon/documentation sprint in Glasgow following OHBM 2022
-- Will participate in Brainhack Global 2022
-- Planning to hold a hackathon/documentation sprint in Montreal in association with OHBM 2023
---- 
-<div style='position=absolute;top:90%;width:100%;text-align:center;font-size:100px;'>
-Thank you!
 </div>
