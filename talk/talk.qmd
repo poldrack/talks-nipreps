@@ -219,11 +219,13 @@ Ciric et al., 2022, *Nature Methods*
 
 :::{.callout-note}
 ## SDC is a significant source of analytical flexibility in functional and diffusion MRI processing
-    - Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof
-    - Multiple correction implementations with different data structures
+<div style="font-size: 0.8em">
+- Multiple fieldmap sequences (spin echo, gradient echo, scanner-reconstructed $B_0$ maps), and combinations thereof
+- Multiple correction implementations with different data structures
+</div>
 :::
 
-::: {.column width="50%"}
+::: {.column width="45%"}
 - Overhaul started early 2021 ([Esteban et al., OHBM 2021](https://doi.org/10.31219/osf.io/gy8nt))
 - Faced many technical challenges → numerous bugfixes
     - vast amount of "edge" cases
@@ -231,7 +233,7 @@ Ciric et al., 2022, *Nature Methods*
     - Jupyter notebooks
 :::
 
-::: {.column width="50%"}
+::: {.column width="45%"}
 ![](images/sdcflows-notebook.png)
 :::
 
@@ -252,7 +254,7 @@ Ciric et al., 2022, *Nature Methods*
     - The model coefficients can easily be integrated within other software (e.g., eddymotion)
 
 ## Result YR1: new visualizations in MRIQC and fMRIPrep
-![](images/sdcflows-notebook.png)
+![](images/celine-carpet-improvement.png)
 ([Provins et al., ISMRM 2022](https://doi.org/10.31219/osf.io/hz52v))
 
 ## Result YR1: NiRodents
