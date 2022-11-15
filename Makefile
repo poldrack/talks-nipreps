@@ -5,14 +5,11 @@ TAG = "NiPreps_BRAINInformatics_11_17_2022"
 all: render-talk render-pdf render-site
 
 render-talk:
-	-git rm -rf docs/talk/*
+	 git rm -rf docs/talk/*
 	cd talk && quarto render talk.qmd
-	# fix quarto bug
-	# need to use sed inline mode
 	-git add docs/talk/*
 	-git add docs/talk/images/*
 	-git add talk/images/*
-	# sed -i.bak 's-LICENSE-talk-' docs/talk/index.html
 	git commit -a -m"updating changed files"
 	git push origin main
 
