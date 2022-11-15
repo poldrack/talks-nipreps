@@ -257,6 +257,10 @@ Ciric et al., 2022, *Nature Methods*
 ![](images/celine-carpet-improvement.png)
 ([Provins et al., ISMRM 2022](https://doi.org/10.31219/osf.io/hz52v))
 
+- Added visualization of voxels at the edge of the brain ("crown")
+- Added hierarchical sorting of rows (voxels) to enhance patterns (Aquino et al. 2019)
+- fMRIPrep: added "edge" regressors (Patriat et al. 2008)
+
 ## Result YR1: NiRodents
 
 ::: {.column width="50%"}
