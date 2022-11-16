@@ -144,8 +144,8 @@ Esteban Lab (CHUV Lausanne)
 
 <div class=centered >Satterthwaite Lab (Penn)</div>
 
-<div class=centered >
-![](images/milham.jpg)
+<div class=centered style="fig-height=200%">
+![](images/milham_lab.png)
 
 Milham Lab (Child Mind Inst)
 </div>
@@ -346,6 +346,7 @@ Mathias Goncalves, *in prep*
 - Evaluation of cross-workflow reproducibility
 - Hackathons and documentation
 - Best practices and educational resources
+- NMIND: Building common standards for software development
 </div>
 
 ## Project monitoring: MIGAS
@@ -358,6 +359,7 @@ Mathias Goncalves, *in prep*
 <div style="fig-align: center;">
 ![](images/migas.png)
 </div>
+
 ::: {.absolute top=95% left=50}
 Mathias Goncalves, *in prep*
 :::
@@ -375,6 +377,7 @@ Mathias Goncalves, *in prep*
 ![](images/li_figure1.jpg)
 :::
 ::::
+
 ::: {.absolute top=95% left=50}
 Xinhui Li et al., *under review*
 :::
@@ -385,7 +388,7 @@ Xinhui Li et al., *under review*
 - Held a hackathon/documentation sprint in Glasgow following OHBM 2022
 - Will participate in Brainhack Global 2022
 - Planning to hold a hackathon/documentation sprint in Montreal in association with OHBM 2023
-
+</div>
 
 ## Best practices and educational resources
 <div style="font-size: 1.2em">
@@ -403,12 +406,23 @@ Xinhui Li et al., *under review*
 
 </div>
 
+## NMIND: Building common standards for software development
+
+- **NMIND**: Nevermind, this Method Is Not Duplicated
+  - *Alignment*: development and adoption of standards for critical software component
+  - *Testing*: accessible and (semi-)automated mechanisms for evaluating standards compliance
+  - *Engagement*: widespread promotion and adoption of the NMIND collaborative standards
+
+
+![](https://www.nmind.org/assets/images/fig1.png){.absolute height="60%" left="10%"}
+
 --- 
 <div style='position=absolute;top:90%;width:100%;text-align:center;font-size:100px;'>
 Thank you!
 </div>
 
 <!-- back up of hidden slides below -->
+###
 
 
 ## Nipreps principles{visibility="hidden"}

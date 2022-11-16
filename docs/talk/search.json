@@ -123,7 +123,7 @@
     "href": "talk.html#aim-3-consolidate-the-nipreps-community",
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Aim 3: Consolidate the NiPreps community",
-    "text": "Aim 3: Consolidate the NiPreps community\n\n\nProject monitoring infrastructure: MIGAS\nEvaluation of cross-workflow reproducibility\nHackathons and documentation\nBest practices and educational resources"
+    "text": "Aim 3: Consolidate the NiPreps community\n\n\nProject monitoring infrastructure: MIGAS\nEvaluation of cross-workflow reproducibility\nHackathons and documentation\nBest practices and educational resources\nNMIND: Building common standards for software development"
   },
   {
     "objectID": "talk.html#project-monitoring-migas",
@@ -152,6 +152,13 @@
     "title": "The NiPreps ecosystem for reproducible neuroimaging",
     "section": "Best practices and educational resources",
     "text": "Best practices and educational resources\n\n\nCollaborative QC-Book (educational, ISMRM 2021): https://nipreps.org/qc-book\nMRIQC-SOPs (standard operating procedures)\n\nA GitHub template-repository to create and maintain versioned SOPs documentation and checklists.\nExample: https://nipreps.org/mriqc-sops/\n\nMRIQC Protocol report (Hagen et al., in preparation)\nFrontiers’ research topic on QC of fMRI (Provins et al., under review)\nBiases introduced by defacing in QC (Provins et al., pre-registered report under review)"
+  },
+  {
+    "objectID": "talk.html#nmind-building-common-standards-for-software-development",
+    "href": "talk.html#nmind-building-common-standards-for-software-development",
+    "title": "The NiPreps ecosystem for reproducible neuroimaging",
+    "section": "NMIND: Building common standards for software development",
+    "text": "NMIND: Building common standards for software development\n\nNMIND: Nevermind, this Method Is Not Duplicated\n\nAlignment: development and adoption of standards for critical software component\nTesting: accessible and (semi-)automated mechanisms for evaluating standards compliance\nEngagement: widespread promotion and adoption of the NMIND collaborative standards"
   },
   {
     "objectID": "talk.html#fmriprep-usage",
