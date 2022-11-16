@@ -414,7 +414,7 @@ Xinhui Li et al., *under review*
   - *Engagement*: widespread promotion and adoption of the NMIND collaborative standards
 
 
-![](https://www.nmind.org/assets/images/fig1.png){.absolute height="60%" left="10%"}
+![](https://www.nmind.org/assets/images/fig1.png){.absolute height="50%" left="10%"}
 
 --- 
 <div style='position=absolute;top:90%;width:100%;text-align:center;font-size:100px;'>
